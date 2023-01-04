@@ -1,0 +1,76 @@
+#landing-popular-lots {
+  .swiper {
+    padding-bottom: 40px;
+  }
+  .swiper-slide {
+    height: auto;
+  }
+
+  .card {
+    box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    display: flex;
+    flex-direction: column;
+
+    @include transitioned;
+
+    &:hover {
+      box-shadow: 0 8px 24px rgb(0 0 0 / 20%);
+    }
+
+    .card-img {
+      padding-bottom: 75%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      position: relative;
+
+      .fav {
+        position: absolute;
+        right: 30px;
+        bottom: 0;
+        transform: translateY(50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        border: none;
+        box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+
+        * {
+          color: #afafaf;
+        }
+      }
+    }
+
+    .card-text {
+      flex-grow: 1;
+      padding: 15px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .time-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background-color: $color8;
+        margin-top: 16px;
+        padding: 8px 16px;
+        height: 38px;
+        border-radius: 4px;
+
+        &,
+        * {
+          color: $color6;
+        }
+      }
+    }
+  }
+}

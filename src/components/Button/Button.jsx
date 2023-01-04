@@ -11,9 +11,17 @@ const Button = ({
   icon,
   textClassName,
   bordered,
+  whiteBlue,
+  orange,
   ...rest
 }) => {
-  const classes = clsx("btn", className, bordered && "btn-bordered");
+  const classes = clsx(
+    "btn",
+    className,
+    bordered && "btn-bordered",
+    orange && "btn-orange",
+    whiteBlue && "btn-orange-blue"
+  );
 
   let btnChilren = (
     <>

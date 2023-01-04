@@ -7,19 +7,19 @@ import "./Product.scss";
 
 const items = [
   {
-    title: "Inventory of café-restaurant Thembi",
+    title: "Elektronica o.a. wasmachines, oven en koelkast",
     lots: 233,
     date: "04 Jan, 22:30",
     imgs: ["/assets/imgs/6.jpg", "/assets/imgs/74.jpg", "/assets/imgs/107.jpg"],
   },
   {
-    title: "Mooning 83 Mona Lisa",
+    title: "Moonen 83 Mona Lisa.",
     lots: 1,
     date: "04 Jan, 11:00 PM",
     imgs: ["/assets/imgs/1.jpg"],
   },
   {
-    title: "Luxury 5 star Hotel inventory",
+    title: "Gereedschap, bouwmaterialen, bouwmaterieel, heftrucks en hout",
     lots: 97,
     date: "04 Jan, 23:15",
     imgs: [
@@ -31,9 +31,9 @@ const items = [
 ];
 
 const msgs = [
-  "Largest auction house in Europe",
-  "Set your own price",
-  "More than 160,000 lots per month",
+  "Europe's largest auction house",
+  "Choose your own price",
+  "More than 160.000 lots per month",
 ];
 
 const Product = () => {
@@ -56,7 +56,7 @@ const Product = () => {
               >
                 <div className="text">
                   <div className="top">
-                    <h5>{el.title}</h5>
+                    <h5 className="text-primary-1">{el.title}</h5>
                   </div>
 
                   <div className="bottom">
@@ -67,7 +67,7 @@ const Product = () => {
                     <div className="d-flex align-items-center gap-10 item">
                       <ClockIcon />
                       <div className="fw-500">
-                        Closes from <span className="fw-600"> {el.date}</span>{" "}
+                        Closes in <span className="fw-600"> {el.date}</span>{" "}
                       </div>
                     </div>
                   </div>

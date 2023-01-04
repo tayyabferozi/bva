@@ -1,0 +1,25 @@
+#landing-highlighted-categories {
+  .card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+    display: block;
+
+    &:hover {
+      box-shadow: 0 8px 24px rgb(0 0 0 / 20%);
+    }
+
+    .card-img {
+      min-height: 240px;
+      background-size: cover;
+    }
+
+    .card-text {
+      padding: 6px;
+
+      h4 {
+        margin: 10px 0;
+      }
+    }
+  }
+}

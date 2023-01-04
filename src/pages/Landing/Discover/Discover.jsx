@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Button from "../../../components/Button";
 import Section from "../../../components/Section";
 import "./Discover.scss";
 
@@ -17,11 +18,11 @@ const Discover = () => {
             />
           </div>
           <div className="center">
-            <h2>Also discover the online auctions at Troostwijk Auctions</h2>
+            <h2>Discover the online auctions at Troostwijk Auctions</h2>
 
-            <Link className="discover-btn" to="/">
-              discover more
-            </Link>
+            <Button orange to="/discover" className="discover-btn">
+              Discover more
+            </Button>
           </div>
           <div className="right">
             <img className="twk" src="/assets/vectors/twk-logo.svg" alt="twk" />

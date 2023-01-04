@@ -1,0 +1,12 @@
+#landing-download {
+  .main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .text {
+      max-width: 50%;
+    }
+  }
+}

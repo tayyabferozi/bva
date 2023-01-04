@@ -1,0 +1,43 @@
+#landing-feedback {
+  padding: 50px 0 80px;
+
+  .feedback-main {
+    display: flex;
+    justify-content: center;
+
+    & > div {
+      border-right: 2px solid #f4f4f4;
+      padding-right: 40px;
+      margin-right: 40px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &.rating-text {
+        .rating {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          flex-basis: 200px;
+          width: 66px;
+          max-width: 66px;
+          height: 66px;
+          margin: 0 20px;
+          background-color: #b3e0fd;
+          border-radius: 100% 100% 15px 100%;
+          font-size: 32px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .feedback-company-logo,
+    .thuiswinkel-logo {
+      width: 150px;
+    }
+  }
+}

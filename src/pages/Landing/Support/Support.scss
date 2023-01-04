@@ -1,0 +1,81 @@
+#landing-support {
+  position: relative;
+  background-color: $color9;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url("../../../assets/bva-bg-pattern.svg");
+    pointer-events: none;
+  }
+
+  .man {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    max-width: 122px;
+    z-index: 9;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding: 50px 18%;
+    grid-gap: 30px;
+    gap: 30px;
+
+    .left {
+      max-width: 40%;
+      min-width: 171px;
+    }
+
+    .center,
+    .right {
+      h5 {
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #333333;
+        font-size: 18px;
+
+        a {
+          text-decoration: underline;
+          color: $color1;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .center {
+      max-width: 40%;
+    }
+
+    .right {
+      max-width: 40%;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    gap: 50px;
+    border-top: 1px solid rgba(14, 86, 151, 0.2);
+
+    img {
+      height: 40px;
+    }
+  }
+}

@@ -6,9 +6,11 @@ import Discover from "./Discover";
 import HighlightedCategories from "./HighlightedCategories";
 import Feedback from "./Feedback";
 import PopularLots from "./PopularLots";
+import ClosingAuctions from "./ClosingAuctions";
 import Bidding from "./Bidding/Bidding";
-import AuctionHouse from "./AuctionHouse/AuctionHouse";
 import Downlaod from "./Downlaod";
+import AuctionHouse from "./AuctionHouse";
+import Support from "./Support";
 
 const Landing = () => {
   return (
@@ -20,8 +22,10 @@ const Landing = () => {
       <Feedback />
       <PopularLots />
       <Bidding />
-      <Downlaod />
+      <ClosingAuctions />
       <AuctionHouse />
+      <Downlaod />
+      <Support />
     </div>
   );
 };

@@ -1,0 +1,59 @@
+#footer {
+  padding: 80px 0;
+  background: url("../../assets/bva-bg-pattern-white.svg") $color1;
+  background-blend-mode: overlay;
+  color: #fff;
+  font-size: 18px;
+
+  .links {
+    margin-top: 24px;
+
+    a {
+      display: block;
+      margin-bottom: 18px;
+      color: hsla(0, 0%, 100%, 0.9);
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 44px;
+    font-size: 16px;
+
+    .social {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        height: 20px;
+        filter: invert(100%);
+      }
+
+      a {
+        &:nth-child(2) {
+          img {
+            height: 30px;
+          }
+        }
+      }
+    }
+
+    .extra-links {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      justify-content: center;
+      flex-flow: wrap;
+      gap: 10px;
+
+      a {
+        img {
+          width: 12px;
+        }
+      }
+    }
+  }
+}

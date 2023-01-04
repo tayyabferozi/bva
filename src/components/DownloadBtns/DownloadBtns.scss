@@ -1,0 +1,16 @@
+.download-btns {
+  display: flex;
+  gap: 16px;
+
+  a {
+    display: block;
+
+    & {
+      img {
+        width: 100%;
+        width: 140px;
+        height: 48px;
+      }
+    }
+  }
+}

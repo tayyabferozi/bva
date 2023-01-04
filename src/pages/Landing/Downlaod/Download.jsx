@@ -1,7 +1,9 @@
 import React from "react";
-import Section from "../../../components/Section";
+import { StarIcon, StarFillIcon } from "@primer/octicons-react";
 
+import Section from "../../../components/Section";
 import "./Download.scss";
+import DownloadBtns from "../../../components/DownloadBtns";
 
 const Download = () => {
   return (
@@ -18,6 +20,20 @@ const Download = () => {
             You no longer have to wait until you get home - with our app you can
             view, bid and win lots anytime, anywhere!
           </p>
+
+          <div className="ratings mb-30">
+            <StarFillIcon size={20} />
+            <StarFillIcon size={20} />
+            <StarFillIcon size={20} />
+            <StarFillIcon size={20} />
+            <StarIcon size={20} />
+          </div>
+
+          <div className="download-from">
+            <h5>Download from:</h5>
+
+            <DownloadBtns />
+          </div>
         </div>
       </div>
     </Section>

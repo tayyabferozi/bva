@@ -4,6 +4,7 @@ import { StackIcon, ClockIcon, CheckIcon } from "@primer/octicons-react";
 
 import Section from "../../../components/Section";
 import "./Product.scss";
+import Button from "../../../components/Button";
 
 const items = [
   {
@@ -45,7 +46,9 @@ const Product = () => {
           style={{
             backgroundImage: "url('/assets/imgs/28251v4.jpg')",
           }}
-        ></div>
+        >
+          <Button orange>All auctions</Button>
+        </div>
         <div className="right">
           {items.map((el, idx) => {
             return (

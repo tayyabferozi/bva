@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3200" height="2775" viewBox="758.293 1535 27.665 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1e1e1e;
+      }
+
+      .cls-2 {
+        fill: #bdea18;
+      }
+
+      .cls-3 {
+        fill: #fc3f4d;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="thuiswinkel-waarborg-footer" transform="translate(758.293 1535)">
+    <g id="Group_6" data-name="Group 6" transform="translate(0)">
+      <path id="Path_23" data-name="Path 23" class="cls-1" d="M34.532,43,20.7,50.99V67H48.365V50.99ZM46.888,65.524H35.265V59.4l11.613-6.712V65.524Zm-13.1,0H22.176V52.7l11.613,6.712v6.115Zm.743-7.393L22.909,51.419l11.613-6.712,11.613,6.712Z" transform="translate(-20.7 -43)"/>
+      <path id="Path_24" data-name="Path 24" class="cls-2" d="M171.423,135.6,159.8,142.312v6.115h11.623Z" transform="translate(-145.235 -125.904)"/>
+      <path id="Path_25" data-name="Path 25" class="cls-3" d="M34.8,148.427H46.413v-6.115L34.8,135.6Z" transform="translate(-33.324 -125.904)"/>
+      <path id="Path_26" data-name="Path 26" class="cls-4" d="M41.8,66.012l11.623,6.712,11.613-6.712L53.423,59.3Z" transform="translate(-39.591 -57.593)"/>
+    </g>
+  </g>
+</svg>

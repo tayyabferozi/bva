@@ -36,3 +36,12 @@ input {
     opacity: 0.5;
   }
 }
+
+.ratings {
+  display: flex;
+  gap: 4px;
+
+  * {
+    color: $color6;
+  }
+}

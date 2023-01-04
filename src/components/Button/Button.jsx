@@ -7,6 +7,7 @@ import "./Button.scss";
 const Button = ({
   className,
   to,
+  small,
   children,
   icon,
   textClassName,
@@ -18,6 +19,7 @@ const Button = ({
   const classes = clsx(
     "btn",
     className,
+    small && "btn-small",
     bordered && "btn-bordered",
     orange && "btn-orange",
     whiteBlue && "btn-orange-blue"

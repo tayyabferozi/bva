@@ -1,0 +1,36 @@
+#auction-categories {
+  padding: 16px 0 70px;
+  background-color: $color5;
+
+  .auction-main {
+    display: flex;
+    justify-content: center;
+    gap: 54px;
+
+    .category-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      &:hover {
+        cursor: pointer;
+
+        .text {
+          text-decoration: underline;
+        }
+      }
+
+      img {
+        width: 36px;
+      }
+
+      .text {
+        margin-top: 4px;
+        font-size: 14px;
+        color: $color1;
+        font-weight: 500;
+      }
+    }
+  }
+}

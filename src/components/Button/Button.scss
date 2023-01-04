@@ -1,0 +1,25 @@
+.btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  flex-shrink: 0;
+  outline: none;
+  padding: 12px;
+  font-size: 16px;
+
+  &.btn-bordered {
+    border: 2px solid #fff;
+
+    .btn-text {
+      color: #fff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

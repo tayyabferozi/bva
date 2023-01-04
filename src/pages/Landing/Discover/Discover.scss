@@ -1,0 +1,83 @@
+#landing-discover {
+  margin-bottom: 20px;
+
+  .discover-main {
+    padding: 40px 40px 40px 30px;
+    background-color: $color1;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .overlay {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(
+        269.34deg,
+        $color1 23.05%,
+        rgba(0, 110, 179, 0) 97.68%
+      );
+      pointer-events: none;
+    }
+
+    .discover {
+      background-image: url("../../../assets/bva-bg-pattern-black.svg");
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        width: 28%;
+        flex-shrink: 0;
+
+        img {
+          width: 150px;
+        }
+      }
+
+      .center {
+        flex-grow: 1;
+        position: relative;
+        z-index: 1;
+
+        h2 {
+          color: #fff;
+          font-weight: 600;
+        }
+
+        .discover-btn {
+          display: inline-block;
+          margin-top: 32px;
+          color: #fff;
+          background-color: $color6;
+          height: 50px;
+          padding: 12px 32px;
+          border-radius: 5px;
+          font-size: 20px;
+          text-decoration: none;
+          font-weight: 500;
+
+          &:hover {
+            background-color: $color8;
+            color: $color6;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 28%;
+        flex-shrink: 0;
+
+        .twk {
+          position: relative;
+          z-index: 1;
+          width: 195px;
+        }
+      }
+    }
+  }
+}

@@ -5,6 +5,15 @@
   color: #fff;
   font-size: 18px;
 
+  @media screen and (max-width: 767px) {
+    padding: 40px 0;
+  }
+
+  .download-btns {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
   .links {
     margin-top: 24px;
 
@@ -22,10 +31,19 @@
     margin-top: 44px;
     font-size: 16px;
 
+    @media screen and (max-width: 767px) {
+      flex-flow: column;
+      text-align: center;
+    }
+
     .social {
       display: flex;
       align-items: center;
       gap: 10px;
+
+      @media screen and (max-width: 767px) {
+        margin: 24px 0;
+      }
 
       img {
         height: 20px;

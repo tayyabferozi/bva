@@ -2,6 +2,10 @@
   position: relative;
   background-color: $color9;
 
+  @media screen and (max-width: 991px) {
+    padding: 20px 0 10px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -19,6 +23,14 @@
     left: 40px;
     max-width: 122px;
     z-index: 9;
+
+    @media screen and (max-width: 991px) {
+      max-width: 100px;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 
   .top {
@@ -30,9 +42,33 @@
     grid-gap: 30px;
     gap: 30px;
 
+    @media screen and (max-width: 1199px) {
+      padding-right: 20px;
+    }
+
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+      padding: 12px 20px;
+      grid-gap: 10px;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    @media screen and (max-width: 991px) {
+      padding-left: 150px;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding-left: 20px;
+    }
+
     .left {
       max-width: 40%;
       min-width: 171px;
+
+      @media screen and (max-width: 991px) {
+        max-width: 100%;
+      }
     }
 
     .center,
@@ -47,7 +83,7 @@
 
         a {
           text-decoration: underline;
-          color: $color1;
+          color: $color11;
 
           &:hover {
             text-decoration: none;
@@ -58,10 +94,18 @@
 
     .center {
       max-width: 40%;
+
+      @media screen and (max-width: 991px) {
+        max-width: 100%;
+      }
     }
 
     .right {
       max-width: 40%;
+
+      @media screen and (max-width: 991px) {
+        max-width: 100%;
+      }
     }
   }
 
@@ -74,8 +118,28 @@
     gap: 50px;
     border-top: 1px solid rgba(14, 86, 151, 0.2);
 
+    @media screen and (max-width: 991px) {
+      padding-left: 150px;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding-left: 20px;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      h5 {
+        width: 100%;
+        text-align: center;
+        gap: 20px;
+      }
+    }
+
     img {
       height: 40px;
+
+      @media screen and (max-width: 767px) {
+        height: 24px;
+      }
     }
   }
 }

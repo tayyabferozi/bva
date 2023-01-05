@@ -1,11 +1,16 @@
 #closing-auctions {
   padding: 80px 0;
 
+  h3 {
+    a {
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+  }
+
   .items {
     .item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       margin: 10px 0;
       height: 250px;
       border-radius: 10px;
@@ -15,11 +20,41 @@
       gap: calc(15px + 24px);
       transition: all 0.2s ease-in-out;
 
+      @media screen and (max-width: 1199px) {
+        height: unset;
+        gap: 20px;
+      }
+
+      @media screen and (max-width: 991px) {
+        height: 100%;
+        padding: 10px;
+      }
+
+      .item-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 991px) {
+          margin-top: 10px;
+        }
+      }
+
       .left {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+
+        @media screen and (max-width: 991px) {
+          flex-grow: 1;
+        }
+
+        h5 {
+          @media screen and (max-width: 1199px) {
+            margin-bottom: 10px;
+          }
+        }
 
         .info {
           .info-item {
@@ -30,9 +65,25 @@
             height: 42px;
             gap: 12px;
 
+            @media screen and (max-width: 1199px) {
+              padding: 3px 12px;
+              margin: 0;
+              height: 36px;
+            }
+
+            @media screen and (max-width: 575px) {
+              padding: 3px 6px;
+            }
+
             &:nth-child(3) {
               * {
                 color: $color6;
+              }
+            }
+
+            .text {
+              @media screen and (max-width: 575px) {
+                font-size: 15px;
               }
             }
           }
@@ -44,6 +95,10 @@
         width: 45%;
         border-radius: 5px;
         overflow: hidden;
+
+        @media screen and (max-width: 991px) {
+          width: 30%;
+        }
 
         img {
           width: 100%;

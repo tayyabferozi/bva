@@ -11,6 +11,15 @@
     .img {
       position: relative;
 
+      @media screen and (max-width: 767px) {
+        position: absolute;
+        // bottom: 20%;
+        top: 50%;
+        transform: translateY(calc(-50% - 20px));
+        left: 10px;
+        margin: 0;
+      }
+
       &::after {
         content: "";
         position: absolute;
@@ -22,10 +31,18 @@
         background-color: #f4f4f4;
         border-radius: 100%;
         z-index: -1;
+
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
       }
 
       img {
         display: block;
+
+        @media screen and (max-width: 767px) {
+          width: 100px;
+        }
       }
     }
 
@@ -33,10 +50,22 @@
       max-width: 50%;
       padding: 0 0.5rem;
 
+      @media screen and (max-width: 767px) {
+        max-width: 100%;
+      }
+
+      p,
+      .ratings {
+        @media screen and (max-width: 767px) {
+          margin-bottom: 16px;
+          margin-left: 120px;
+          font-size: 16px;
+        }
+      }
+
       .download-from {
         display: flex;
         align-items: center;
-        height: 88px;
         padding: 20px 30px;
         font-size: 20px;
         font-weight: 500;
@@ -44,6 +73,34 @@
         border-radius: 10px;
         box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
         gap: 22px;
+
+        @media screen and (max-width: 1199px) {
+          flex-direction: column;
+        }
+
+        @media screen and (max-width: 767px) {
+          position: relative;
+        }
+
+        h5 {
+          flex-shrink: 0;
+        }
+
+        .download-btns {
+          flex-wrap: wrap;
+
+          @media screen and (max-width: 1050px) {
+            gap: 4px;
+          }
+
+          @media screen and (max-width: 767px) {
+            flex-direction: column;
+          }
+
+          @media screen and (max-width: 767px) {
+            flex-direction: row;
+          }
+        }
       }
     }
   }

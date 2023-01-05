@@ -59,29 +59,37 @@ const ClosingAuctions = () => {
         <GridContainer noPx0>
           {items.map((el, idx) => {
             return (
-              <div key={"closing-auc" + idx} className="col-lg-6">
+              <div key={"closing-auc" + idx} className="col-md-6">
                 <Link to="/" className="item no-dec">
-                  <div className="left">
-                    <h5 className="text-primary-1">{el.text}</h5>
-                    <div className="info">
-                      <div className="info-item">
-                        <StackIcon size={20} />
-                        <div className="text">{el.lots} lots</div>
-                      </div>
-                      <div className="info-item">
-                        <LocationIcon size={20} />
-                        <div className="text">{el.location}</div>
-                      </div>
-                      <div className="info-item">
-                        <ClockIcon size={20} />
-                        <div className="text fw-500">
-                          Closes in <span className="fw-600"> {el.time}</span>
+                  <h5 className="text-primary-1 d-lg-none d-block">
+                    {el.text}
+                  </h5>
+
+                  <div className="item-main">
+                    <div className="left">
+                      <h5 className="text-primary-1 d-lg-block d-none">
+                        {el.text}
+                      </h5>
+                      <div className="info">
+                        <div className="info-item">
+                          <StackIcon size={20} />
+                          <div className="text">{el.lots} lots</div>
+                        </div>
+                        <div className="info-item">
+                          <LocationIcon size={20} />
+                          <div className="text">{el.location}</div>
+                        </div>
+                        <div className="info-item">
+                          <ClockIcon size={20} />
+                          <div className="text fw-500">
+                            Closes in <span className="fw-600"> {el.time}</span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="right">
-                    <img src={el.img} alt={el.text} />
+                    <div className="right">
+                      <img src={el.img} alt={el.text} />
+                    </div>
                   </div>
                 </Link>
               </div>

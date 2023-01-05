@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <Section id="footer">
       <GridContainer noPx0>
-        <div className="col-sm-3">
+        <div className="col-md-3">
           <h5>Service &amp; contact</h5>
 
           <div className="links">
@@ -21,7 +21,7 @@ const Footer = () => {
             <Link to="/">Login</Link>
           </div>
         </div>
-        <div className="col-sm-3">
+        <div className="col-md-3">
           <h5>More BVA Auctions</h5>
 
           <div className="links">
@@ -30,7 +30,7 @@ const Footer = () => {
             <Link to="/">Careers</Link>
           </div>
         </div>
-        <div className="col-sm-3">
+        <div className="col-md-3">
           <h5>More BVA Auctions</h5>
 
           <div className="ratings my-30">
@@ -43,7 +43,7 @@ const Footer = () => {
 
           <DownloadBtns />
         </div>
-        <div className="col-sm-3">
+        <div className="col-md-3">
           <h5>More BVA Auctions</h5>
 
           <p className="my-3">

@@ -11,11 +11,11 @@ const Support = () => {
 
       <div className="top">
         <div className="left">
-          <h3 className="text-primary-1 text-center">Do you need help?</h3>
+          <h3 className="text-primary-2 text-center">Do you need help?</h3>
         </div>
 
         <div className="center">
-          <Link to="/" className="no-dec text-primary-1">
+          <Link to="/" className="no-dec text-primary-2">
             <h5 className="fw-500">Frequently Asked Questions</h5>
           </Link>
           <p>
@@ -25,7 +25,7 @@ const Support = () => {
         </div>
 
         <div className="right">
-          <Link to="/" className="no-dec text-primary-1">
+          <Link to="/" className="no-dec text-primary-2">
             <h5 className="fw-500">Contact</h5>
           </Link>
           <p>

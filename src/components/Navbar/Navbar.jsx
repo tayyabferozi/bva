@@ -7,6 +7,8 @@ import {
   PersonIcon,
   MegaphoneIcon,
   ThreeBarsIcon,
+  ArrowLeftIcon,
+  XIcon,
 } from "@primer/octicons-react";
 import clsx from "clsx";
 
@@ -74,9 +76,69 @@ const categoryItems = [
 const Navbar = () => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [isSearchActive, setIsSearchActive] = useState(false);
+  const [smallMenuState, setSmallMenuState] = useState();
+  const [isSmallMenuActive, setIsSmallMenuActive] = useState(false);
 
   return (
     <Section id="navbar">
+      <div
+        className={clsx("close-sm-menu", isSmallMenuActive && "active")}
+        onClick={() => setIsSmallMenuActive(false)}
+      >
+        Close
+        <XIcon size={24} />
+      </div>
+      <div className={clsx("menu-sm", isSmallMenuActive && "active")}>
+        <div className="main">
+          {smallMenuState === "categories" ? (
+            <>
+              <h2
+                onClick={() => {
+                  setSmallMenuState(null);
+                }}
+              >
+                <ArrowLeftIcon size={24} className="me-3" /> Categories
+              </h2>
+
+              <div className="menu-listing">
+                {categoryItems.map((el, idx) => {
+                  return (
+                    <div className="nav-item" key={"small-cate" + idx}>
+                      {el.label}
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          ) : (
+            <>
+              <h2>Welkom bij BVA Auctions!</h2>
+
+              <div className="menu-listing">
+                <Link to="/">Customer service</Link>
+                <div
+                  className="nav-item"
+                  onClick={() => setSmallMenuState("categories")}
+                >
+                  <div className="text">Categories</div>
+                  <ChevronRightIcon size={24} />
+                </div>
+                <Link to="/">Auctioning online with BVA Auctions</Link>
+                <Link to="/">About BVA Auctions</Link>
+                <Link to="/">Careers</Link>
+                <div className="nav-item">
+                  <div className="text">Language</div>
+                  <ChevronRightIcon size={24} />
+                </div>
+
+                <Link to="/register" className="bottom-item">
+                  Register
+                </Link>
+              </div>
+            </>
+          )}
+        </div>
+      </div>
       <div className="navbar-main">
         <div className={clsx("menu-content", isMenuActive && "active")}>
           <div className="items">
@@ -157,7 +219,10 @@ const Navbar = () => {
           <div className="text">Auctions</div>
         </div>
 
-        <div className="item">
+        <div
+          className="item"
+          onClick={() => setIsSearchActive(!isSearchActive)}
+        >
           <SearchIcon size={24} />
 
           <div className="text">Search</div>
@@ -169,7 +234,13 @@ const Navbar = () => {
           <div className="text">Login</div>
         </div>
 
-        <div className="item">
+        <div
+          className="item"
+          onClick={() => {
+            setIsSmallMenuActive(true);
+            setSmallMenuState(null);
+          }}
+        >
           <ThreeBarsIcon size={24} />
 
           <div className="text">Menu</div>

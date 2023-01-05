@@ -1,5 +1,6 @@
 #navbar {
   background-color: $color1;
+  position: relative;
 
   @media screen and (max-width: 991px) {
     // padding-bottom: 10px;
@@ -7,6 +8,87 @@
 
   * {
     color: #fff;
+  }
+
+  .close-sm-menu {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+    width: 35%;
+    height: 60px;
+    font-size: 16px;
+    color: $color1;
+    line-height: normal;
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+    z-index: 9002;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    &,
+    * {
+      color: $color1;
+    }
+  }
+
+  .menu-sm {
+    position: absolute;
+    left: 0;
+    border-radius: 10px 0 10px 10px;
+    width: calc(100% - 14px);
+    margin: 0 0 0 7px;
+    box-shadow: 0 15px 40px rgb(0 0 0 / 30%);
+    z-index: 9001;
+    transition: all 0.2s ease;
+    background-color: #fff;
+    top: 100%;
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    * {
+      color: $color1 !important;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    .main {
+      padding: 30px 16px;
+
+      h2 {
+        margin-bottom: 22px;
+      }
+
+      .menu-listing {
+        a,
+        .nav-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 16px;
+
+          &.bottom-item {
+            padding-top: 16px;
+            margin: 0;
+            border-top: 1px solid $color1;
+          }
+        }
+      }
+    }
   }
 
   .navbar-laptop {

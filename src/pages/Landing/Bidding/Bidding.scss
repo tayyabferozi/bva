@@ -38,14 +38,43 @@
       line-height: 28px;
       counter-reset: item;
 
+      @media screen and (max-width: 767px) {
+        flex-flow: column;
+        margin: 0;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
+        background-image: url("../../../assets/dotted-line-s.svg");
+        background-size: 80%;
+        background-position-y: 30px;
+      }
+
       .step-item {
         position: relative;
         width: 314px;
         padding: 0 20px;
         counter-increment: item;
 
+        @media screen and (max-width: 767px) {
+          width: auto;
+          margin: 0 0 60px;
+          padding: 0 10% 0 80px;
+        }
+
         &:nth-child(2) {
           margin-top: 88px;
+
+          @media screen and (max-width: 767px) {
+            margin-top: 0;
+            padding: 0 80px 0 10%;
+            text-align: right;
+
+            .number {
+              left: auto;
+              right: 16px;
+              border-radius: 100% 100% 100% 10px;
+            }
+          }
         }
 
         .number {
@@ -61,6 +90,17 @@
           color: #f60;
           line-height: normal;
           text-align: center;
+
+          @media screen and (max-width: 767px) {
+            position: absolute;
+            top: 0;
+            left: 16px;
+            width: 50px;
+            height: 50px;
+            padding: 5px 0;
+            border-radius: 100% 100% 10px 100%;
+            font-size: 30px;
+          }
         }
       }
     }
@@ -69,10 +109,23 @@
       display: flex;
       justify-content: center;
 
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .btn {
         margin: 0 10px;
         min-width: 360px;
         justify-content: center;
+
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+          margin: 0 0 15px;
+          padding: 16px 24px;
+          min-width: 300px;
+          max-width: 370px;
+        }
       }
     }
   }

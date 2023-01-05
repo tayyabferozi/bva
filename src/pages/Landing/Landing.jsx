@@ -22,10 +22,10 @@ const Landing = () => {
       <Feedback />
       <PopularLots />
       <Bidding />
-      <ClosingAuctions />
+      {/* <ClosingAuctions />
       <AuctionHouse />
       <Downlaod />
-      <Support />
+      <Support /> */}
     </div>
   );
 };

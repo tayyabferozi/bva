@@ -26,25 +26,28 @@ const HighlightedCategories = () => {
       <h3 className="pt-20 mb-10">Highlighted Categories</h3>
 
       <div className="category-items">
-        <GridContainer>
-          {categories.map((el, idx) => {
-            return (
-              <div key={"highlighted-category-item" + idx} className="col-lg-4">
-                <Link to="/" className="card no-dec">
-                  <div
-                    className="card-img"
-                    style={{
-                      backgroundImage: `url('${el.img}')`,
-                    }}
-                  ></div>
-                  <div className="card-text text-center text-primary-1">
-                    <h4>{el.label}</h4>
-                  </div>
-                </Link>
-              </div>
-            );
-          })}
-        </GridContainer>
+        {/* <GridContainer> */}
+        {categories.map((el, idx) => {
+          return (
+            <div
+              key={"highlighted-category-item" + idx}
+              className="category-item"
+            >
+              <Link to="/" className="card no-dec">
+                <div
+                  className="card-img"
+                  style={{
+                    backgroundImage: `url('${el.img}')`,
+                  }}
+                ></div>
+                <div className="card-text text-center text-primary-1">
+                  <h4>{el.label}</h4>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
+        {/* </GridContainer> */}
       </div>
     </Section>
   );

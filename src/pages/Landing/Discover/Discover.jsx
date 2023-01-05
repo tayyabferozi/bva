@@ -20,9 +20,11 @@ const Discover = () => {
           <div className="center">
             <h2>Discover the online auctions at Troostwijk Auctions</h2>
 
-            <Button orange to="/discover" className="discover-btn">
-              Discover more
-            </Button>
+            <div className="d-lg-block d-flex justify-content-center">
+              <Button orange to="/discover" className="discover-btn">
+                Discover more
+              </Button>
+            </div>
           </div>
           <div className="right">
             <img className="twk" src="/assets/vectors/twk-logo.svg" alt="twk" />

@@ -69,7 +69,7 @@ const Product = () => {
                     </div>
                     <div className="d-flex align-items-center gap-10 item">
                       <ClockIcon />
-                      <div className="fw-500">
+                      <div className="fw-500 closes">
                         Closes in <span className="fw-600"> {el.date}</span>{" "}
                       </div>
                     </div>

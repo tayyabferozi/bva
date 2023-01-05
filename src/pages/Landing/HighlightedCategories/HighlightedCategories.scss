@@ -1,26 +1,45 @@
 #landing-highlighted-categories {
-  .card {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
-    display: block;
+  .category-items {
+    display: flex;
+    gap: 24px;
+    overflow-x: scroll;
 
-    @include transitioned;
+    .category-item {
+      width: 33.33%;
+      min-width: 450px;
 
-    &:hover {
-      box-shadow: 0 8px 24px rgb(0 0 0 / 20%);
+      @media screen and (max-width: 767px) {
+        min-width: 250px;
+      }
     }
 
-    .card-img {
-      min-height: 240px;
-      background-size: cover;
-    }
+    .card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+      display: block;
 
-    .card-text {
-      padding: 6px;
+      @include transitioned;
 
-      h4 {
-        margin: 10px 0;
+      &:hover {
+        box-shadow: 0 8px 24px rgb(0 0 0 / 20%);
+      }
+
+      .card-img {
+        min-height: 240px;
+        background-size: cover;
+
+        @media screen and (max-width: 767px) {
+          min-height: 130px;
+        }
+      }
+
+      .card-text {
+        padding: 6px;
+
+        h4 {
+          margin: 10px 0;
+        }
       }
     }
   }

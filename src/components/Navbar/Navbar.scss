@@ -1,8 +1,35 @@
 #navbar {
   background-color: $color1;
 
+  @media screen and (max-width: 991px) {
+    // padding-bottom: 10px;
+  }
+
   * {
     color: #fff;
+  }
+
+  .navbar-laptop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 84px;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    .logo {
+      width: 40px;
+    }
+
+    .item {
+      .text {
+        font-size: 12px;
+        margin-top: 4px;
+      }
+    }
   }
 
   .navbar-main {
@@ -13,6 +40,14 @@
     height: 72px;
     gap: 10px;
     position: relative;
+
+    @media screen and (max-width: 991px) {
+      justify-content: flex-end;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
 
     .nav-item {
       &,
@@ -34,6 +69,7 @@
       z-index: 1000;
       opacity: 0;
       pointer-events: none;
+
       @include transitioned;
 
       &.active {
@@ -83,11 +119,25 @@
 
         img {
           width: 56px;
+
+          @media screen and (max-width: 991px) {
+            width: 48px;
+          }
+
+          @media screen and (max-width: 767px) {
+            width: 36px;
+          }
         }
       }
 
       .menu-wrap {
-        margin: 0 40px;
+        margin: 0 20px;
+        @media screen and (min-width: 768px) {
+        }
+
+        @media screen and (min-width: 1200px) {
+          margin: 0 40px;
+        }
 
         .menu-text {
           display: flex;
@@ -120,37 +170,6 @@
 
     .center {
       flex-grow: 1;
-
-      .search-bar {
-        position: relative;
-        margin: 0 40px;
-
-        input {
-          height: 50px;
-          display: block;
-          width: 100%;
-          border-radius: 4px;
-          padding-left: 16px;
-          padding-right: 41px;
-          color: $color3 !important;
-        }
-
-        .icon {
-          position: absolute;
-          top: 0;
-          right: 0;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          width: 56px;
-
-          &:hover {
-            background-color: $color4;
-          }
-        }
-      }
     }
 
     .right {
@@ -163,6 +182,53 @@
         align-items: center;
         gap: 10px;
       }
+    }
+  }
+}
+
+.search-bar {
+  position: relative;
+  margin: 0 40px;
+
+  @media screen and (max-width: 1199px) {
+    margin: 0 20px;
+  }
+
+  @media screen and (max-width: 991px) {
+    margin: 0 0 0;
+  }
+
+  @media screen and (max-width: 991px) {
+    height: 60px;
+
+    .icon {
+      height: 50px !important;
+    }
+  }
+
+  input {
+    height: 50px;
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 16px;
+    padding-right: 41px;
+    color: $color3 !important;
+  }
+
+  .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 56px;
+
+    &:hover {
+      background-color: $color4;
     }
   }
 }

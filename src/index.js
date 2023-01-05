@@ -5,6 +5,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

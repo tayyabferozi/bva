@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Pagination } from "swiper";
 import {
   MegaphoneIcon,
   ClockIcon,
@@ -98,7 +99,16 @@ const PopularLots = () => {
     <Section id="landing-popular-lots">
       <h3 className="mb-30">Popular lots</h3>
 
-      <Swiper slidesPerView={5} spaceBetween={20}>
+      <Swiper
+        slidesPerView={"auto"}
+        spaceBetween={20}
+        freeMode={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[FreeMode]}
+        className="mySwiper"
+      >
         {items.map((el, idx) => {
           return (
             <SwiperSlide key={"popular-lot" + idx}>

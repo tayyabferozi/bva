@@ -9,6 +9,13 @@
     height: 470px;
     display: flex;
 
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+      margin-left: -10px;
+      margin-right: -10px;
+      border-radius: 0;
+    }
+
     & > * {
       width: 50%;
     }
@@ -18,40 +25,80 @@
       background-size: cover;
       position: relative;
 
+      @media screen and (max-width: 991px) {
+        height: 470px;
+        width: 100%;
+      }
+
       .btn {
         position: absolute;
         left: 40px;
         bottom: 50px;
+
+        @media screen and (max-width: 991px) {
+          bottom: 25px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }
 
     .right {
+      @media screen and (max-width: 991px) {
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        min-height: 138px;
+      }
+
       .product-item {
         border-bottom: 2px solid $color5;
         min-height: 157px;
         display: flex;
         padding: 6px 0;
 
+        @media screen and (max-width: 991px) {
+          width: 33.33%;
+          min-height: 138px;
+          border-right: 2px solid #f4f4f4;
+          min-width: 320px;
+        }
+
         & > * {
         }
 
         .text {
           padding: 0 24px;
-          width: 60%;
+          width: 55%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+
+          @media screen and (max-width: 991px) {
+            padding: 0 16px;
+          }
 
           svg {
             transform: scale(1.2) translateY(1px);
           }
 
           .top {
+            h5 {
+              line-height: 1.6;
+              max-height: 52px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
           }
 
           .bottom {
             .item {
               height: 42px;
+
+              .closes {
+                font-size: 14px;
+              }
 
               &:nth-child(2) {
                 * {
@@ -64,23 +111,43 @@
 
         .imgs {
           position: relative;
-          width: 40%;
+          width: 45%;
           padding: 24px;
+          flex-shrink: 0;
+
+          @media screen and (max-width: 991px) {
+            padding: 18px;
+          }
 
           .imgs-main {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%s);
+            transform: translateY(-50%);
+
+            @media screen and (max-width: 991px) {
+              // width: 100%;
+              // left: 50%;
+              // transform: translate(-50%, -50%);
+              height: 100%;
+              position: static;
+              transform: unset;
+            }
 
             img {
               position: absolute;
               top: 50%;
               transform: translateY(-50%);
               border-radius: 5px;
-              width: 100%;
               width: 152px;
               box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
               z-index: 9;
+
+              @media screen and (max-width: 991px) {
+                width: 100%;
+                position: static;
+                transform: none;
+                // width: 70%;
+              }
 
               &:nth-child(1) {
                 z-index: 3;
@@ -90,12 +157,20 @@
                 left: 20px;
                 transform: translateY(-50%) scale(0.9);
                 z-index: 2;
+
+                @media screen and (max-width: 991px) {
+                  display: none;
+                }
               }
 
               &:nth-child(3) {
                 left: 40px;
                 transform: translateY(-50%) scale(0.8);
                 z-index: 1;
+
+                @media screen and (max-width: 991px) {
+                  display: none;
+                }
               }
             }
           }
@@ -112,7 +187,17 @@
     margin-top: 30px;
     margin-bottom: 52px;
 
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+
     .item {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 10px;
+      }
       svg {
         margin-right: 12px;
       }

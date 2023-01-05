@@ -2,8 +2,10 @@
   .swiper {
     padding-bottom: 40px;
   }
+
   .swiper-slide {
     height: auto;
+    width: 265px;
   }
 
   .card {
@@ -14,6 +16,7 @@
     display: block;
     display: flex;
     flex-direction: column;
+    width: 265px;
 
     @include transitioned;
 

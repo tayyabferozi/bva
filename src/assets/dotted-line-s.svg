@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="300px" height="419px" viewBox="0 0 300 419" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>07 Misc/Dotted Line-S</title>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-dasharray="11" stroke-linecap="round">
-        <g id="Comp/Explain-box-S" transform="translate(-39.000000, -126.000000)" stroke="#FF702E" stroke-width="4">
-            <path d="M-18.4287137,483.571286 C58.992326,469.477744 85.5099042,428.811078 61.1240206,361.571286 C27.9248019,270.030271 46.3447238,188.571286 123.719724,187.571286 C201.094724,186.571286 237.938474,262.571286 199.389646,343.801795 C159.479164,427.901594 192.346677,483.571286 260.938474,483.071286 C329.530271,482.571286 316.282224,394.616208 329.700193,356.821286 C338.645505,331.624672 360.891599,325.041338 396.438474,337.071286" id="07-Misc/Dotted-Line-S" transform="translate(189.004880, 335.566406) rotate(-270.000000) translate(-189.004880, -335.566406) "></path>
-        </g>
-    </g>
+	<title>
+		07 Misc/Dotted Line-S
+	</title>
+	<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-dasharray="11" stroke-linecap="round">
+		<g id="Comp/Explain-box-S" transform="translate(-39.000000, -126.000000)" stroke="#FF702E" stroke-width="4">
+			<path d="M-18.4287137,483.571286 C58.992326,469.477744 85.5099042,428.811078 61.1240206,361.571286 C27.9248019,270.030271 46.3447238,188.571286 123.719724,187.571286 C201.094724,186.571286 237.938474,262.571286 199.389646,343.801795 C159.479164,427.901594 192.346677,483.571286 260.938474,483.071286 C329.530271,482.571286 316.282224,394.616208 329.700193,356.821286 C338.645505,331.624672 360.891599,325.041338 396.438474,337.071286" id="07-Misc/Dotted-Line-S" transform="translate(189.004880, 335.566406) rotate(-270.000000) translate(-189.004880, -335.566406) ">
+			</path>
+		</g>
+	</g>
 </svg>

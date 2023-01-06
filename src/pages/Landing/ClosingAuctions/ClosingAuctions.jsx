@@ -56,7 +56,7 @@ const ClosingAuctions = () => {
       </h3>
 
       <div className="items mt-30">
-        <GridContainer noPx0>
+        <GridContainer>
           {items.map((el, idx) => {
             return (
               <div key={"closing-auc" + idx} className="col-md-6">

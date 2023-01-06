@@ -3,8 +3,11 @@
     display: flex;
     gap: 24px;
     padding-bottom: 26px;
-    padding-left: 20px;
-    padding-right: 20px;
+    // padding-left: 20px;
+    // padding-right: 20px;
+    // margin-left: -20px;
+
+    overflow-x: auto;
 
     &::-webkit-scrollbar {
       height: 4px;
@@ -19,7 +22,6 @@
     }
 
     @media screen and (max-width: 1199px) {
-      overflow-x: scroll;
     }
 
     .category-item {

@@ -1,15 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination } from "swiper";
-import {
-  MegaphoneIcon,
-  ClockIcon,
-  HeartFillIcon,
-} from "@primer/octicons-react";
+import { FreeMode } from "swiper";
 
 import Section from "../../../components/Section";
 import "./PopularLots.scss";
+import AuctionItemCard from "../../../components/AuctionItemCard/AuctionItemCard";
 
 const items = [
   {
@@ -112,41 +107,7 @@ const PopularLots = () => {
         {items.map((el, idx) => {
           return (
             <SwiperSlide key={"popular-lot" + idx}>
-              <Link to="/" className="card no-dec">
-                <div
-                  className="card-img"
-                  style={{
-                    backgroundImage: `url(${el.img})`,
-                  }}
-                >
-                  <div className="fav">
-                    <HeartFillIcon size={20} />
-                  </div>
-                </div>
-                <div className="card-text">
-                  <div>
-                    <div className="fs-14 mb-2">{el.placeholder}</div>
-                    <h5 className="mb-10 text-primary-1">{el.text}</h5>
-                  </div>
-
-                  <div>
-                    <div className="py-2 d-flex justify-content-between align-items-center">
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="me-2">
-                          <MegaphoneIcon size={18} />
-                        </div>
-                        <strong>€ {el.price}</strong>
-                      </div>
-                      <div>{el.bids} bids</div>
-                    </div>
-
-                    <div className="time-tag">
-                      <ClockIcon size={16} />
-                      <div>{el.time}</div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+              <AuctionItemCard {...el} />
             </SwiperSlide>
           );
         })}

@@ -1,0 +1,43 @@
+#category-results-filters {
+  margin-top: 14px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 0;
+    padding: 20px 10px 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .collapsible-section {
+    margin-bottom: 20px;
+  }
+
+  .filter-item {
+    margin: 20px 0;
+    padding: 0 8px;
+  }
+
+  .btn-orange {
+    position: sticky;
+    width: calc(100% - 20px);
+    justify-content: center;
+    left: 16px;
+    bottom: 25px;
+    // transform: translateX(-50%);
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    .btn-text {
+      font-size: 20px;
+    }
+  }
+}

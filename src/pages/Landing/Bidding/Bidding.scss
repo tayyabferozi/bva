@@ -11,7 +11,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: url("../../../assets/bva-bg-pattern-white.svg");
+    background: url("../../../assets/vectors/bva-bg-pattern-white.svg");
     pointer-events: none;
   }
 
@@ -31,7 +31,8 @@
       display: flex;
       justify-content: space-around;
       margin: 0 0 54px;
-      background: url("../../../assets/dotted-line.svg") no-repeat center 20%;
+      background: url("../../../assets/vectors/dotted-line.svg") no-repeat
+        center 20%;
       background-size: 65%;
       font-size: 18px;
       font-weight: 400;
@@ -44,7 +45,7 @@
         font-size: 16px;
         line-height: 24px;
         text-align: left;
-        background-image: url("../../../assets/dotted-line-s.svg");
+        background-image: url("../../../assets/vectors/dotted-line-s.svg");
         background-size: 80%;
         background-position-y: 30px;
       }

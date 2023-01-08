@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["clsx", "npm:1.2.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:61715f6f23fc229fedd2bd79d4ebf786faf45c2c725741ef9aa754dd0f1b9151a37138b3b51d231cfa6691b12c37b863693630020ab817e36fd63814ca1bcfb2#npm:18.2.0"],\
+            ["react-paginate", "virtual:61715f6f23fc229fedd2bd79d4ebf786faf45c2c725741ef9aa754dd0f1b9151a37138b3b51d231cfa6691b12c37b863693630020ab817e36fd63814ca1bcfb2#npm:8.1.4"],\
             ["react-router-dom", "virtual:61715f6f23fc229fedd2bd79d4ebf786faf45c2c725741ef9aa754dd0f1b9151a37138b3b51d231cfa6691b12c37b863693630020ab817e36fd63814ca1bcfb2#npm:6.6.1"],\
             ["react-scripts", "virtual:61715f6f23fc229fedd2bd79d4ebf786faf45c2c725741ef9aa754dd0f1b9151a37138b3b51d231cfa6691b12c37b863693630020ab817e36fd63814ca1bcfb2#npm:5.0.1"],\
             ["sass", "npm:1.57.1"],\
@@ -6335,6 +6336,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["clsx", "npm:1.2.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:61715f6f23fc229fedd2bd79d4ebf786faf45c2c725741ef9aa754dd0f1b9151a37138b3b51d231cfa6691b12c37b863693630020ab817e36fd63814ca1bcfb2#npm:18.2.0"],\
+            ["react-paginate", "virtual:61715f6f23fc229fedd2bd79d4ebf786faf45c2c725741ef9aa754dd0f1b9151a37138b3b51d231cfa6691b12c37b863693630020ab817e36fd63814ca1bcfb2#npm:8.1.4"],\
             ["react-router-dom", "virtual:61715f6f23fc229fedd2bd79d4ebf786faf45c2c725741ef9aa754dd0f1b9151a37138b3b51d231cfa6691b12c37b863693630020ab817e36fd63814ca1bcfb2#npm:6.6.1"],\
             ["react-scripts", "virtual:61715f6f23fc229fedd2bd79d4ebf786faf45c2c725741ef9aa754dd0f1b9151a37138b3b51d231cfa6691b12c37b863693630020ab817e36fd63814ca1bcfb2#npm:5.0.1"],\
             ["sass", "npm:1.57.1"],\
@@ -14807,6 +14809,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/react-is-npm-18.2.0-0cc5edb910-e72d0ba81b.zip/node_modules/react-is/",\
           "packageDependencies": [\
             ["react-is", "npm:18.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-paginate", [\
+        ["npm:8.1.4", {\
+          "packageLocation": "./.yarn/cache/react-paginate-npm-8.1.4-1629540f4f-0e733ca70a.zip/node_modules/react-paginate/",\
+          "packageDependencies": [\
+            ["react-paginate", "npm:8.1.4"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:61715f6f23fc229fedd2bd79d4ebf786faf45c2c725741ef9aa754dd0f1b9151a37138b3b51d231cfa6691b12c37b863693630020ab817e36fd63814ca1bcfb2#npm:8.1.4", {\
+          "packageLocation": "./.yarn/__virtual__/react-paginate-virtual-575f0334b7/0/cache/react-paginate-npm-8.1.4-1629540f4f-0e733ca70a.zip/node_modules/react-paginate/",\
+          "packageDependencies": [\
+            ["react-paginate", "virtual:61715f6f23fc229fedd2bd79d4ebf786faf45c2c725741ef9aa754dd0f1b9151a37138b3b51d231cfa6691b12c37b863693630020ab817e36fd63814ca1bcfb2#npm:8.1.4"],\
+            ["@types/react", null],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\

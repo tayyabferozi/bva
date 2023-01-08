@@ -1,0 +1,20 @@
+.collapsible-section {
+  &__title {
+    font-size: 16px;
+    color: $color15;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+
+    .caret {
+      &.rotate {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__main {
+  }
+}

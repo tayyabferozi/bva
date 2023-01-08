@@ -11,7 +11,7 @@ import Button from "../Button";
 const Footer = () => {
   return (
     <Section id="footer">
-      <GridContainer noPx0>
+      <GridContainer>
         <div className="col-md-3">
           <h5>Service &amp; contact</h5>
 

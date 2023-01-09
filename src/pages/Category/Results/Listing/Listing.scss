@@ -33,6 +33,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      .sort {
+        text-align: left;
+
+        .selected-text {
+          min-width: 160px;
+        }
+      }
     }
   }
 

@@ -8,8 +8,10 @@ import ReactPaginate from "react-paginate";
 
 import AuctionItemCard from "../../../../components/AuctionItemCard";
 import GridContainer from "../../../../components/GridContainer";
-import "./Listing.scss";
 import Button from "../../../../components/Button";
+import Select from "../../../../components/Select/Select";
+import Option from "../../../../components/Select/Option";
+import "./Listing.scss";
 
 const items = [
   {
@@ -206,6 +208,17 @@ const items = [
   },
 ];
 
+const sorts = [
+  "First closing",
+  "Last closing",
+  "Least bids",
+  "Most bids",
+  "Lowest bids",
+  "Highest bids",
+  "First lot number",
+  "Last lot number",
+];
+
 const Listing = ({ setShowFilters }) => {
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
@@ -244,10 +257,24 @@ const Listing = ({ setShowFilters }) => {
       <div className="delimitated">
         <div className="page-size-wrapper">
           <div className="results-form-label">Page size:</div>
+          <Select defaultValue="24">
+            <Option value="24">24</Option>
+            <Option value="48">48</Option>
+            <Option value="96">96</Option>
+          </Select>
         </div>
         <div className="filters">
-          <div className="filters-list-item">
+          <div className="filters-list-item d-flex align-items-center sort">
             <div className="sort-form-label">Sort by:</div>
+            <Select defaultValue="First closing" className="sort">
+              {sorts.map((el, idx) => {
+                return (
+                  <Option value={el} key={"sort" + idx}>
+                    {el}
+                  </Option>
+                );
+              })}
+            </Select>
           </div>
           <div className="filters-list-item">
             <ListUnorderedIcon size={24} />

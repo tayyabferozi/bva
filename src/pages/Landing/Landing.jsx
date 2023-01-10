@@ -4,13 +4,13 @@ import Categories from "../../components/Categories";
 import Product from "./Product";
 import Discover from "./Discover";
 import HighlightedCategories from "./HighlightedCategories";
-import Feedback from "./Feedback";
+import Feedback from "../../partials/Feedback";
 import PopularLots from "./PopularLots";
 import ClosingAuctions from "./ClosingAuctions";
 import Bidding from "./Bidding/Bidding";
-import Downlaod from "./Downlaod";
+import Downlaod from "../../partials/Downlaod";
 import AuctionHouse from "./AuctionHouse";
-import Support from "./Support";
+import Support from "../../partials/Support";
 
 const Landing = () => {
   return (

@@ -1,0 +1,41 @@
+#about-us-auction {
+  padding: 70px 0;
+  background-color: #f4f4f4;
+  background-image: none, url("../../../assets/imgs/auction_section.png");
+  background-blend-mode: overlay, normal;
+  background-size: auto, contain;
+  background-position: 50%, 0 0;
+  background-repeat: repeat, no-repeat;
+
+  @media screen and (max-width: 1280px) {
+    background-image: none, url("../../../assets/imgs/auction_section-md.png");
+    padding: 35px 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    background-image: none;
+    padding-top: 0;
+  }
+
+  .text {
+    @media screen and (min-width: 768px) {
+      padding-left: 60%;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    p {
+      color: $color21;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
+
+.full-img {
+  width: 100vw !important;
+  margin-left: -10px;
+}

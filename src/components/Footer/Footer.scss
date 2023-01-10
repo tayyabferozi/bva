@@ -24,6 +24,13 @@
     }
   }
 
+  .ratings {
+    &,
+    * {
+      color: $color2;
+    }
+  }
+
   .bottom {
     display: flex;
     align-items: center;

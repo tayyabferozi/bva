@@ -1,0 +1,57 @@
+#about-us-benefits {
+  padding: 65px 10px 65px;
+  position: relative;
+  background: url("../../../assets/vectors/bva-bg-pattern-white.svg") $color1;
+
+  * {
+    color: #fff;
+    text-align: center;
+  }
+
+  .main-row {
+    --bs-gutter-y: 50px;
+  }
+
+  .badge {
+    background-color: #fff;
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: $color2;
+    font-size: 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .items {
+    margin-top: 80px;
+
+    .tick {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 0 0 88px;
+      width: 88px;
+      height: 88px;
+      background-color: #fff;
+      border-radius: 100% 100% 20px 100%;
+      font-size: 29px;
+      margin-bottom: 32px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media screen and (max-width: 767px) {
+        height: 64px;
+        width: 64px;
+      }
+
+      &,
+      * {
+        color: $color2;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+#about-us-place-bid {
+  padding: 70px 0;
+  background-image: none, url("../../../assets/imgs/bid.png");
+  background-blend-mode: overlay, normal;
+  background-size: auto, contain;
+  background-position: 50%, 100% 0;
+  background-repeat: repeat, no-repeat;
+
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0;
+    background-image: none, url("../../../assets/imgs/bid-md.png");
+  }
+
+  @media screen and (max-width: 767px) {
+    background-image: none;
+    padding-top: 0;
+  }
+
+  .bid-section-content {
+    @media screen and (min-width: 768px) {
+      max-width: 80%;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    p {
+      max-width: 540px;
+
+      @media screen and (max-width: 991px) {
+        max-width: 400px;
+      }
+    }
+
+    .bid-section-text {
+      margin-bottom: 25px;
+      color: $color21;
+      line-height: 28px;
+      font-size: 18px;
+    }
+  }
+}

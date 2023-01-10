@@ -13,6 +13,7 @@ const Button = ({
   textClassName,
   bordered,
   whiteBlue,
+  green,
   orange,
   ...rest
 }) => {
@@ -22,6 +23,7 @@ const Button = ({
     small && "btn-small",
     bordered && "btn-bordered",
     orange && "btn-orange",
+    green && "btn-green",
     whiteBlue && "btn-orange-blue"
   );
 

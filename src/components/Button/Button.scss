@@ -52,6 +52,24 @@
     }
   }
 
+  &.btn-green {
+    background-color: $color18;
+
+    .btn-text {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: $color19;
+    }
+  }
+
   &.btn-orange-blue {
     background-color: #fff;
     // border: 2px solid #006eb3;

@@ -1,0 +1,38 @@
+#about-us-brands {
+  padding: 60px 0 0;
+  background-color: $color10;
+
+  .main {
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      height: 200px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 5px;
+
+      @media screen and (max-width: 575px) {
+        margin: 0;
+        padding: 20px;
+      }
+
+      img {
+        max-width: 250px;
+        width: 100%;
+      }
+    }
+  }
+}

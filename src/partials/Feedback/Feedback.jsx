@@ -1,12 +1,13 @@
 import React from "react";
+import clsx from "clsx";
 
-import Section from "../../../components/Section";
+import Section from "../../components/Section";
 import "./Feedback.scss";
 
-const Feedback = () => {
+const Feedback = ({ grey }) => {
   return (
-    <Section id="landing-feedback">
-      <div className="feedback-main">
+    <Section id="feedback" className={clsx({ grey })}>
+      <div className={clsx("feedback-main")}>
         <div>
           <img
             className="feedback-company-logo"

@@ -1,5 +1,9 @@
-#landing-feedback {
+#feedback {
   padding: 50px 0 80px;
+
+  &.grey {
+    background-color: $color10;
+  }
 
   .feedback-main {
     display: flex;

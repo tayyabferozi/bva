@@ -17,15 +17,15 @@ const Footer = () => {
 
           <div className="links">
             <Link to="/">Contact &amp; questions</Link>
-            <Link to="/">Register</Link>
-            <Link to="/">Login</Link>
+            <Link to="/register">Register</Link>
+            <Link to="/login">Login</Link>
           </div>
         </div>
         <div className="col-md-3">
           <h5>More BVA Auctions</h5>
 
           <div className="links">
-            <Link to="/">About us</Link>
+            <Link to="/about-us">About us</Link>
             <Link to="/">Auction something yourself?</Link>
             <Link to="/">Careers</Link>
           </div>
@@ -50,7 +50,7 @@ const Footer = () => {
             Latest auctions and personal lots in your mailbox?
           </p>
 
-          <Button small orange>
+          <Button className="d-inline-flex" to="/register" small orange>
             Register
           </Button>
         </div>

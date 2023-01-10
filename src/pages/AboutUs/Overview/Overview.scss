@@ -1,0 +1,76 @@
+#about-us-overview {
+  padding: 65px 0;
+  background-color: $color12;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  .map {
+    max-width: 260px;
+    margin: auto;
+    width: 100%;
+  }
+
+  .overview-main {
+    background: url("../../../assets/vectors/map.svg") no-repeat 50%;
+    background-size: contain;
+    padding: 120px 60px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    @media screen and (max-width: 1199px) {
+      padding: 60px 10px 0;
+    }
+
+    @media screen and (max-width: 991px) {
+      padding: 30px 5px 0;
+    }
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+      background: none;
+    }
+
+    .figures-item {
+      text-align: left;
+      margin-bottom: 64px;
+
+      @media screen and (max-width: 767px) {
+        text-align: center;
+      }
+
+      .figures-item-number {
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: 700;
+        color: #f60;
+
+        @media screen and (max-width: 991px) {
+          font-size: 40px;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 32px;
+        }
+      }
+
+      .figures-item-comment {
+        font-weight: 500;
+        font-size: 20px;
+        margin-top: 4px;
+
+        @media screen and (max-width: 991px) {
+          font-size: 18px;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

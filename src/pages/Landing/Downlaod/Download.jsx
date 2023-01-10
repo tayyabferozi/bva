@@ -1,9 +1,9 @@
 import React from "react";
 import { StarIcon, StarFillIcon } from "@primer/octicons-react";
 
-import Section from "../../../components/Section";
+import Section from "../../components/Section";
 import "./Download.scss";
-import DownloadBtns from "../../../components/DownloadBtns";
+import DownloadBtns from "../../components/DownloadBtns";
 
 const Download = () => {
   return (

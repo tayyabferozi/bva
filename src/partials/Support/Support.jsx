@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Section from "../../../components/Section";
+import Section from "../../components/Section";
 import "./Support.scss";
 
 const Support = () => {
   return (
-    <Section id="landing-support">
+    <Section id="support">
       <img src="/assets/imgs/man.png" alt="man" className="man" />
 
       <div className="top">

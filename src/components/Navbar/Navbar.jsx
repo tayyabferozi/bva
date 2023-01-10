@@ -198,7 +198,7 @@ const Navbar = () => {
           <Link className="nav-item" to="/customer-service">
             Customer service
           </Link>
-          <Button bordered>
+          <Button bordered to="/login">
             <PersonIcon size={24} />
             Login
           </Button>

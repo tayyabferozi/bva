@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   ChevronRightIcon,
   ChevronDownIcon,
@@ -74,6 +74,7 @@ const categoryItems = [
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [smallMenuState, setSmallMenuState] = useState();
@@ -103,7 +104,15 @@ const Navbar = () => {
               <div className="menu-listing">
                 {categoryItems.map((el, idx) => {
                   return (
-                    <div className="nav-item" key={"small-cate" + idx}>
+                    <div
+                      className="nav-item"
+                      key={"small-cate" + idx}
+                      onClick={() => {
+                        navigate("/category");
+                        setIsMenuActive(false);
+                        setIsMenuActive(false);
+                      }}
+                    >
                       {el.label}
                     </div>
                   );
@@ -144,14 +153,18 @@ const Navbar = () => {
           <div className="items">
             {categoryItems.map((el, idx) => {
               return (
-                <Link
-                  to="/"
-                  className="item no-dec"
+                <div
+                  className="item no-dec c-pointer"
                   key={"cateogyr-itsm" + idx}
+                  onClick={() => {
+                    navigate("/category");
+                    setIsMenuActive(false);
+                    setIsMenuActive(false);
+                  }}
                 >
                   <div>{el.label}</div>
                   <ChevronRightIcon size={18} />
-                </Link>
+                </div>
               );
             })}
           </div>

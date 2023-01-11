@@ -59,3 +59,28 @@ ul {
     margin-bottom: 6px;
   }
 }
+
+.btn.one-click {
+  .btn-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .one-click {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      font-size: 9px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.btn.btn-save {
+  width: 100%;
+  max-width: 220px;
+  justify-content: center;
+}

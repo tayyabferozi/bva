@@ -9,7 +9,7 @@ import Register from "./pages/Register";
 import AboutUs from "./pages/AboutUs";
 import BecomeSeller from "./pages/BecomeSeller";
 import AllAuctions from "./pages/AllAuctions";
-import Auction from "./pages/Auction";
+import AuctionMin from "./pages/AuctionMin";
 import Disclaimer from "./pages/Disclaimer";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
@@ -20,6 +20,7 @@ import MyArchive from "./pages/Dashboard/MyArchive";
 import MyPurchases from "./pages/Dashboard/MyPurchases";
 import PersonalInformation from "./pages/Dashboard/PersonalInformation";
 import MySettings from "./pages/Dashboard/MySettings";
+import Auction from "./pages/Auction/Auction";
 
 const AppRoutes = () => {
   return (
@@ -32,11 +33,12 @@ const AppRoutes = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/all-auctions" element={<AllAuctions />} />
-          <Route path="/auction" element={<Auction />} />
+          <Route path="/auction-min" element={<AuctionMin />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/how-bidding-works" element={<HowItWorks />} />
+          <Route path="/auction" element={<Auction />} />
         </Route>
         <Route path="/dashboard" element={<MainLayout />}>
           <Route path="/dashboard" element={<DashboardLayout />}>

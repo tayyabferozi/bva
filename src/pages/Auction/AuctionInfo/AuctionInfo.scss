@@ -1,0 +1,41 @@
+#auction {
+  #auction-info {
+    .info {
+      .head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+        font-size: 18px;
+        font-weight: 500;
+        white-space: nowrap;
+        padding: 8px 0;
+        gap: 8px;
+
+        &.closed {
+          background-color: $color13;
+          color: $color21;
+        }
+      }
+
+      .body {
+        .lot-info {
+          border-top: 1px solid #e1e1e1;
+          border-bottom: 1px solid #e1e1e1;
+          padding: 10px;
+        }
+
+        .lot-row {
+          display: flex;
+          flex-wrap: wrap;
+
+          .lot-col {
+            padding: 4px;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,14 +1,14 @@
 import React from "react";
 
-import Head from "./Head";
-import Content from "./Content";
+import AuctionHead from "./AuctionHead";
 import "./Auction.scss";
+import AuctionInfo from "./AuctionInfo";
 
 const Auction = () => {
   return (
     <div id="auction">
-      <Head />
-      <Content />
+      <AuctionHead />
+      <AuctionInfo />
     </div>
   );
 };

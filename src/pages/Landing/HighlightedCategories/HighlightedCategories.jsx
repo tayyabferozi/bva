@@ -33,7 +33,7 @@ const HighlightedCategories = () => {
               key={"highlighted-category-item" + idx}
               className="category-item"
             >
-              <Link to="/" className="card no-dec">
+              <Link to="/category" className="card no-dec">
                 <div
                   className="card-img"
                   style={{

@@ -18,6 +18,7 @@ import MyLots from "./pages/Dashboard/MyLots";
 import MyWonLots from "./pages/Dashboard/MyWonLots";
 import MyArchive from "./pages/Dashboard/MyArchive";
 import MyPurchases from "./pages/Dashboard/MyPurchases";
+import MyDeliveries from "./pages/Dashboard/MyDeliveries";
 import PersonalInformation from "./pages/Dashboard/PersonalInformation";
 import MySettings from "./pages/Dashboard/MySettings";
 import Auction from "./pages/Auction";
@@ -45,7 +46,7 @@ const AppRoutes = () => {
             <Route path="/dashboard/my-lots" element={<MyLots />} />
             <Route path="/dashboard/my-won-lots" element={<MyWonLots />} />
             <Route path="/dashboard/my-purchases" element={<MyPurchases />} />
-            <Route path="/dashboard/my-deliveries" element={<MyLots />} />
+            <Route path="/dashboard/my-deliveries" element={<MyDeliveries />} />
             <Route path="/dashboard/my-archive" element={<MyArchive />} />
             <Route
               path="/dashboard/personal-information"

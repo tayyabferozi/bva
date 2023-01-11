@@ -19,7 +19,7 @@ const links = [
   },
   {
     label: "My deliveries",
-    link: "/dashboard/deliveries",
+    link: "/dashboard/my-deliveries",
   },
   {
     label: "My archive",

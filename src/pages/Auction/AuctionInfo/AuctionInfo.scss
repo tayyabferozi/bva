@@ -1,25 +1,156 @@
 #auction {
   #auction-info {
+    padding-bottom: 50px;
+
     .info {
+      box-shadow: 0 10px 30px 0 rgb(0 0 0 / 10%);
+      border-radius: 10px;
+      overflow: hidden;
+
       .head {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 10px 10px 0 0;
         overflow: hidden;
         font-size: 18px;
         font-weight: 500;
         white-space: nowrap;
         padding: 8px 0;
         gap: 8px;
+        height: 46px;
 
         &.closed {
           background-color: $color13;
           color: $color21;
         }
+
+        &:not(.closed) {
+          background-color: rgba(255, 112, 46, 0.1);
+
+          &,
+          * {
+            color: $color1;
+          }
+        }
       }
 
       .body {
+        .bidding-info {
+          padding: 10px;
+          border-bottom: 1px solid #e1e1e1;
+
+          .bidding-numbers {
+            margin-bottom: 24px;
+            font-size: 18px;
+            line-height: normal;
+
+            .bidding-numbers-items {
+              display: flex;
+
+              .bidding-numbers-item {
+                display: flex;
+                flex-flow: column;
+                width: 50%;
+
+                .bid-status-label {
+                  margin-bottom: 4px;
+                }
+              }
+            }
+
+            .costs {
+              font-size: 14px;
+              color: $color1;
+            }
+          }
+        }
+
+        .bidding-container {
+          .bidding-controls {
+            display: flex;
+            gap: 10px;
+
+            .bidding-control {
+              display: flex;
+              gap: 10px;
+              min-height: 50px;
+
+              .input-currency {
+                display: block;
+                position: relative;
+                border-radius: 3px;
+                margin: 0;
+                height: 100%;
+                margin-bottom: 4px;
+
+                input {
+                  border: 1px solid #bebebe;
+                  height: 50px;
+                  border-radius: 4px;
+                  padding: 0 20px 0 10px;
+                  text-align: right;
+                }
+
+                .label {
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  cursor: text;
+                  pointer-events: none;
+                  font-size: 100%;
+                  margin: 0;
+                  line-height: 46px;
+                  padding-left: 10px;
+                  opacity: 1;
+                  transition: all 0.2s;
+                }
+              }
+            }
+
+            .heart {
+              height: 48px;
+              width: 48px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 5px 0;
+              margin: 0;
+              border-radius: 4px;
+              border: 1px solid #bebebe;
+              background-color: #fff;
+              line-height: 27px;
+              outline: 0;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .bid-history {
+          padding: 10px;
+
+          table {
+            width: 100%;
+
+            td {
+              height: 24px;
+              font-size: 15px;
+
+              &:nth-child(2) {
+                text-align: center;
+              }
+
+              &:nth-child(3) {
+                text-align: right;
+              }
+            }
+          }
+
+          .history-info {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+
         .lot-info {
           border-top: 1px solid #e1e1e1;
           border-bottom: 1px solid #e1e1e1;
@@ -29,13 +160,68 @@
         .lot-row {
           display: flex;
           flex-wrap: wrap;
-
           .lot-col {
             padding: 4px;
             width: 50%;
+
+            @media screen and (max-width: 575px) {
+              width: 100%;
+
+              padding: 10px 4px;
+            }
           }
         }
       }
+    }
+
+    .mySwiper2,
+    .mySwiper {
+      @media screen and (max-width: 991px) {
+        max-height: 500px;
+      }
+
+      @media screen and (max-width: 767px) {
+        max-height: 400px;
+
+        .swiper-slide {
+          position: relative;
+          overflow: hidden;
+
+          .img-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .mySwiper2 {
+      // height: auto;
+    }
+
+    .mySwiper {
+      img {
+        width: 100%;
+      }
+    }
+
+    .info-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-flow: row;
+      width: 100%;
+      height: 60px;
+      padding: 0 24px;
+      border-top: 1px solid #e1e1e1;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
     }
   }
 }

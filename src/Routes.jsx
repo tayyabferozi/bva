@@ -20,7 +20,7 @@ import MyArchive from "./pages/Dashboard/MyArchive";
 import MyPurchases from "./pages/Dashboard/MyPurchases";
 import PersonalInformation from "./pages/Dashboard/PersonalInformation";
 import MySettings from "./pages/Dashboard/MySettings";
-import Auction from "./pages/Auction/Auction";
+import Auction from "./pages/Auction";
 
 const AppRoutes = () => {
   return (

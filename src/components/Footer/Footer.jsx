@@ -26,8 +26,8 @@ const Footer = () => {
 
           <div className="links">
             <Link to="/about-us">About us</Link>
-            <Link to="/">Auction something yourself?</Link>
-            <Link to="/">Careers</Link>
+            <Link to="/become-a-seller">Auction something yourself?</Link>
+            <Link to="/careers">Careers</Link>
           </div>
         </div>
         <div className="col-md-3">
@@ -81,10 +81,10 @@ const Footer = () => {
             <img src="/assets/vectors/thuiswinkel.svg" alt="thuiswinkel" />
             Thuiswinkel waarborg
           </Link>
-          <Link to="/">Privacy and Cookie conditions</Link>
-          <Link to="/">General terms and conditions</Link>
-          <Link to="/">Disclaimer</Link>
-          <Link to="/">&copy; BVA Auctions 2013</Link>
+          <Link to="/privacy">Privacy and Cookie conditions</Link>
+          <Link to="/terms">General terms and conditions</Link>
+          <Link to="/disclaimer">Disclaimer</Link>
+          <div>&copy; BVA Auctions 2013</div>
         </div>
       </div>
     </Section>

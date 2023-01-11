@@ -276,9 +276,9 @@ const Listing = ({ setShowFilters }) => {
               })}
             </Select>
           </div>
-          <div className="filters-list-item">
+          {/* <div className="filters-list-item">
             <ListUnorderedIcon size={24} />
-          </div>
+          </div> */}
         </div>
       </div>
 

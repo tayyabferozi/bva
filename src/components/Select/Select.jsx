@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronDownIcon } from "@primer/octicons-react";
+import clsx from "clsx";
 
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 import { SelectContext } from "./selectContext";
 import "./Select.scss";
 
-const Select = ({ children, defaultValue, placeholder }) => {
+const Select = ({ className, children, defaultValue, placeholder }) => {
   const [selectedOption, setSelectedOption] = useState(defaultValue || "");
   const [showDropdown, setShowDropdown] = useState(false);
   const showDropdownHandler = () => setShowDropdown(!showDropdown);
@@ -25,13 +26,11 @@ const Select = ({ children, defaultValue, placeholder }) => {
     if (defaultValue) setSelectedOption(defaultValue);
   }, [defaultValue]);
 
-  console.log(selectedOption);
-
   return (
     <SelectContext.Provider
       value={{ selectedOption, changeSelectedOption: updateSelectedOption }}
     >
-      <div className="custom-form-control">
+      <div className={clsx("custom-form-control mb-0", className)}>
         <div className="custom-select-container" ref={selectContainerRef}>
           <div
             className={showDropdown ? "selected-text active" : "selected-text"}

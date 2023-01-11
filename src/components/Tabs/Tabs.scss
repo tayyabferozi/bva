@@ -1,0 +1,23 @@
+.tabs {
+  display: flex;
+
+  .tab {
+    padding: 15px 24px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: 700;
+    height: 52px;
+    cursor: pointer;
+
+    @include transitioned;
+
+    @media screen and (max-width: 575px) {
+      padding: 12px 16px;
+      font-size: 15px;
+    }
+
+    &.active {
+      background-color: #fff;
+    }
+  }
+}

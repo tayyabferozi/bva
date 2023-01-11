@@ -47,7 +47,9 @@ const Product = () => {
             backgroundImage: "url('/assets/imgs/28251v4.jpg')",
           }}
         >
-          <Button orange>All auctions</Button>
+          <Button orange to="/all-auctions">
+            All auctions
+          </Button>
         </div>
         <div className="right">
           {items.map((el, idx) => {

@@ -172,7 +172,9 @@ const Navbar = () => {
               />
             </div>
           </div>
-          <Link className="nav-item">All auctions</Link>
+          <Link to="/all-auctions" className="nav-item">
+            All auctions
+          </Link>
         </div>
         <div className="center">
           <div

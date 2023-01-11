@@ -11,7 +11,7 @@ const AuctionItemCard2 = ({ text, lots, location, img, time }) => {
 
       <div className="item-main">
         <div className="left">
-          <h5 className="text-primary-1 d-lg-block d-none">{text}</h5>
+          <h5 className="text-primary-1 d-lg-block d-none pe-3">{text}</h5>
           <div className="info">
             <div className="info-item">
               <StackIcon size={20} />

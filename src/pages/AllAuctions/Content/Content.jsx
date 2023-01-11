@@ -1,10 +1,9 @@
 import React from "react";
 
 import Section from "../../../components/Section";
-import Select from "../../../components/Select/Select";
-import Option from "../../../components/Select/Option";
 import AuctionItemCard2 from "../../../components/AuctionItemCard2";
 import GridContainer from "../../../components/GridContainer";
+import PageSize from "../../../components/PageSize";
 
 const items = [
   {
@@ -158,14 +157,7 @@ const Content = () => {
         <div className="fs-20">
           <strong>69</strong> Auctions
         </div>
-        <div className="d-flex align-items-center">
-          <div className="me-20">Page size:</div>
-          <Select defaultValue="24" className="mb-0">
-            <Option value="24">24</Option>
-            <Option value="48">48</Option>
-            <Option value="96">96</Option>
-          </Select>
-        </div>
+        <PageSize />
       </div>
 
       <div className="items my-30">

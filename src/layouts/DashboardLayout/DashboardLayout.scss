@@ -1,0 +1,76 @@
+#dashboard-layout {
+  padding-bottom: 40px;
+
+  .navigation {
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+    position: sticky;
+    top: 10px;
+
+    .links {
+      margin-top: 10px;
+
+      a {
+        padding: 7px 0;
+        display: block;
+
+        &.active {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .tabs {
+    .tab.active {
+      background-color: $color5;
+    }
+  }
+
+  .listing-head {
+    background-color: $color5;
+    padding: 16px;
+    border-bottom: 1px solid $color13;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .custom-select-container {
+      background-color: #fff;
+    }
+  }
+
+  .no-lots {
+    color: #71787f;
+    font-size: 14px;
+    word-wrap: break-word;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dotted $color14;
+    margin-top: 20px;
+  }
+
+  .button-wrap {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+    align-items: center;
+    padding: 12px;
+    border-top: 1px solid rgba(3, 3, 3, 0.15);
+    border-bottom: 1px solid rgba(3, 3, 3, 0.15);
+
+    .btn {
+      height: 40px;
+
+      .btn-text {
+        font-size: 16px;
+      }
+    }
+  }
+}

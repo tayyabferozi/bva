@@ -17,7 +17,7 @@ const Login = () => {
 
           <Input label="Password" type="password" />
 
-          <Button orange className="mt-20">
+          <Button to="/dashboard/my-lots" orange className="mt-20">
             Log in
           </Button>
 

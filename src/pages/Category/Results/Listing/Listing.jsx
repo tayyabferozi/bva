@@ -12,6 +12,7 @@ import Button from "../../../../components/Button";
 import Select from "../../../../components/Select/Select";
 import Option from "../../../../components/Select/Option";
 import "./Listing.scss";
+import PageSize from "../../../../components/PageSize";
 
 const items = [
   {
@@ -256,12 +257,7 @@ const Listing = ({ setShowFilters }) => {
 
       <div className="delimitated">
         <div className="page-size-wrapper">
-          <div className="results-form-label">Page size:</div>
-          <Select defaultValue="24">
-            <Option value="24">24</Option>
-            <Option value="48">48</Option>
-            <Option value="96">96</Option>
-          </Select>
+          <PageSize />
         </div>
         <div className="filters">
           <div className="filters-list-item d-flex align-items-center sort">

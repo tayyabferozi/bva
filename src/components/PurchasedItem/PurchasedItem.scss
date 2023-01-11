@@ -1,0 +1,15 @@
+.purchased-item {
+  display: flex;
+  padding: 12px;
+  border-bottom: 1px solid rgba(3, 3, 3, 0.15);
+  align-items: center;
+
+  .lot-img {
+    margin-right: 32px;
+    width: 125px;
+
+    img {
+      width: 100%;
+    }
+  }
+}

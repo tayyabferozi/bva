@@ -1,0 +1,87 @@
+.auction-item-card-3 {
+  display: block;
+  min-height: 228px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 40px;
+  background-color: #fff;
+
+  .item-main {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 575px) {
+      flex-direction: column;
+      padding-bottom: 10px;
+    }
+
+    .thumbnail {
+      width: 30%;
+      display: block;
+      height: 228px;
+      width: 320px;
+      margin: 0;
+      padding: 0;
+      border-radius: 10px 0 0 10px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+
+      @media screen and (max-width: 575px) {
+        height: 150px;
+        background-size: contain;
+      }
+    }
+
+    .lot-number {
+      min-height: 35px;
+      padding: 15px 20px 5px;
+      padding-right: 12px;
+      font-size: 14px;
+    }
+
+    .title {
+      margin-top: 0;
+      padding: 0 12px 12px 20px;
+      height: 40px;
+      min-height: 40px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+      color: #006eb3;
+    }
+
+    .bid-meta {
+      display: flex;
+      align-items: center;
+      padding: 8px 20px;
+      margin-bottom: 8px;
+
+      .bid {
+        padding-right: 14px;
+        font-weight: bold;
+      }
+    }
+
+    .time {
+      padding: 0 20px 20px;
+    }
+
+    .time-tag {
+      color: $color21;
+      background-color: $color5;
+      display: flex;
+      align-items: center;
+      grid-gap: 6px;
+      gap: 6px;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}

@@ -8,6 +8,7 @@ import Section from "../../../components/Section";
 import Select from "../../../components/Select/Select";
 import Option from "../../../components/Select/Option";
 import "./Content.scss";
+import PageSize from "../../../components/PageSize";
 
 const categories = [
   {
@@ -262,14 +263,7 @@ const Content = () => {
               <strong>6</strong> kavels
             </div>
             <div className="filters-list">
-              <div className="d-flex align-items-center">
-                <div className="me-20">Page size:</div>
-                <Select defaultValue="24" className="mb-0">
-                  <Option value="24">24</Option>
-                  <Option value="48">48</Option>
-                  <Option value="96">96</Option>
-                </Select>
-              </div>
+              <PageSize />
               <div className="filters-list-item d-flex align-items-center sort">
                 <div className="sort-form-label me-20">Sort by:</div>
                 <Select defaultValue="First closing" className="sort">

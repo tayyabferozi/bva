@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { StackIcon, ClockIcon, CheckIcon } from "@primer/octicons-react";
 import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
 
 import Section from "../../../components/Section";
 import Button from "../../../components/Button";
@@ -97,15 +98,17 @@ const Product = () => {
         </div>
       </div>
 
-      <div className="marketing-msgs">
-        {msgs.map((el, idx) => {
-          return (
-            <div key={"marketing-msg" + idx} className="item">
-              <CheckIcon /> {el}
-            </div>
-          );
-        })}
-      </div>
+      <Slide bottom cascade>
+        <div className="marketing-msgs">
+          {msgs.map((el, idx) => {
+            return (
+              <div key={"marketing-msg" + idx} className="item">
+                <CheckIcon /> {el}
+              </div>
+            );
+          })}
+        </div>
+      </Slide>
     </Section>
   );
 };

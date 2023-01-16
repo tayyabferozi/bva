@@ -1,4 +1,5 @@
 import React from "react";
+import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 import Flip from "react-reveal/Flip";
 
@@ -25,9 +26,11 @@ const Bidding = () => {
   return (
     <Section id="landing-bidding">
       <div className="bidding-main">
-        <h3 className="mb-40">How does bidding work?</h3>
+        <Slide bottom>
+          <h3 className="mb-40">How does bidding work?</h3>
+        </Slide>
 
-        <Fade cascade bottom>
+        <Fade cascade bottom delay={750}>
           <div className="steps">
             {steps.map((el, idx) => {
               return (

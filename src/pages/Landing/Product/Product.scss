@@ -60,13 +60,19 @@
     }
 
     .right {
-      overflow: hidden;
+      @media screen and (min-width: 992px) {
+        overflow: hidden;
+      }
 
       @media screen and (max-width: 991px) {
-        display: flex;
         width: 100%;
-        overflow-x: scroll;
-        min-height: 138px;
+
+        & > div {
+          height: 140px;
+          display: flex;
+          overflow-x: scroll;
+          min-height: 138px;
+        }
       }
 
       .product-item {

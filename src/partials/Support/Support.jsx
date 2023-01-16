@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Bounce from "react-reveal/Bounce";
+import Fade from "react-reveal/Fade";
 
 import Section from "../../components/Section";
 import "./Support.scss";
@@ -10,7 +10,7 @@ const Support = () => {
     <Section id="support">
       {/* <img src="/assets/imgs/man.png" alt="man" className="man" /> */}
 
-      <Bounce bottom>
+      <Fade bottom>
         <div className="top">
           <div className="left">
             <h3 className="text-primary-2 text-center">Do you need help?</h3>
@@ -44,7 +44,7 @@ const Support = () => {
           <img src="/assets/vectors/logo-visa.svg" alt="visa" />
           <img src="/assets/vectors/logo-maestro.svg" alt="maestro" />
         </div>
-      </Bounce>
+      </Fade>
     </Section>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation } from "swiper";
 import { ArrowRightIcon, ArrowLeftIcon } from "@primer/octicons-react";
+import Fade from "react-reveal/Fade";
 
 import AuctionItemCard from "../../../components/AuctionItemCard/AuctionItemCard";
 import Section from "../../../components/Section";
@@ -169,25 +170,27 @@ const TrendingLots = () => {
         </div>
       </div>
 
-      <Swiper
-        slidesPerView={"auto"}
-        spaceBetween={30}
-        freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[FreeMode, Navigation]}
-        className="mySwiper"
-        navigation={{ prevEl, nextEl }}
-      >
-        {items.map((el, idx) => {
-          return (
-            <SwiperSlide key={"trending-lot" + idx}>
-              <AuctionItemCard {...el} uniqueName="trendingLot" idx={idx} />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+      <Fade>
+        <Swiper
+          slidesPerView={"auto"}
+          spaceBetween={30}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[FreeMode, Navigation]}
+          className="mySwiper"
+          navigation={{ prevEl, nextEl }}
+        >
+          {items.map((el, idx) => {
+            return (
+              <SwiperSlide key={"trending-lot" + idx}>
+                <AuctionItemCard {...el} uniqueName="trendingLot" idx={idx} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </Fade>
     </Section>
   );
 };

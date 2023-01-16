@@ -12,29 +12,39 @@ import Button from "../Button";
 const Footer = () => {
   return (
     <Section id="footer">
-      <Fade>
-        <GridContainer className="px-0">
-          <div className="col-md-3">
+      <GridContainer className="px-0">
+        <div className="col-md-3">
+          <Fade bottom>
             <h5>Service &amp; contact</h5>
+          </Fade>
 
+          <Fade cascade delay={500} bottom>
             <div className="links">
               <Link to="/">Contact &amp; questions</Link>
               <Link to="/register">Register</Link>
               <Link to="/login">Login</Link>
             </div>
-          </div>
-          <div className="col-md-3">
+          </Fade>
+        </div>
+        <div className="col-md-3">
+          <Fade bottom>
             <h5>More BVA Auctions</h5>
+          </Fade>
 
+          <Fade cascade delay={1000} bottom>
             <div className="links">
               <Link to="/about-us">About us</Link>
               <Link to="/become-a-seller">Auction something yourself?</Link>
               <Link to="/careers">Careers</Link>
             </div>
-          </div>
-          <div className="col-md-3">
+          </Fade>
+        </div>
+        <div className="col-md-3">
+          <Fade bottom>
             <h5>More BVA Auctions</h5>
+          </Fade>
 
+          <Fade cascade delay={1500} bottom>
             <div className="ratings my-30">
               <StarFillIcon size={20} />
               <StarFillIcon size={20} />
@@ -42,22 +52,32 @@ const Footer = () => {
               <StarFillIcon size={20} />
               <StarIcon size={20} />
             </div>
+          </Fade>
 
+          <Fade delay={1750} bottom>
             <DownloadBtns />
-          </div>
-          <div className="col-md-3">
+          </Fade>
+        </div>
+        <div className="col-md-3">
+          <Fade bottom>
             <h5>More BVA Auctions</h5>
+          </Fade>
 
-            <p className="my-3">
-              Latest auctions and personal lots in your mailbox?
-            </p>
+          <Fade cascade delay={2000} bottom>
+            <div>
+              <p className="my-3">
+                Latest auctions and personal lots in your mailbox?
+              </p>
 
-            <Button className="d-inline-flex" to="/register" small orange>
-              Register
-            </Button>
-          </div>
-        </GridContainer>
+              <Button className="d-inline-flex" to="/register" small orange>
+                Register
+              </Button>
+            </div>
+          </Fade>
+        </div>
+      </GridContainer>
 
+      <Fade cascade delay={2000} bottom>
         <div className="bottom">
           <Link to="/">
             Logo
@@ -79,16 +99,19 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="extra-links">
-            {/* <Link to="/">
+          <Fade cascade delay={3000} bottom>
+            <div className="extra-links">
+              {/* <Link to="/">
             <img src="/assets/vectors/thuiswinkel.svg" alt="thuiswinkel" />
             Thuiswinkel waarborg
           </Link> */}
-            <Link to="/privacy">Privacy and Cookie conditions</Link>
-            <Link to="/terms">General terms and conditions</Link>
-            <Link to="/disclaimer">Disclaimer</Link>
-            <div>&copy; BVA Auctions 2013</div>
-          </div>
+
+              <Link to="/privacy">Privacy and Cookie conditions</Link>
+              <Link to="/terms">General terms and conditions</Link>
+              <Link to="/disclaimer">Disclaimer</Link>
+              <div>&copy; BVA Auctions 2013</div>
+            </div>
+          </Fade>
         </div>
       </Fade>
     </Section>

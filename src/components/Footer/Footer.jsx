@@ -27,7 +27,7 @@ const Footer = () => {
           </Fade>
         </div>
         <div className="col-md-3">
-          <Fade bottom>
+          <Fade bottom delay={1000}>
             <h5>More BVA Auctions</h5>
           </Fade>
 
@@ -40,7 +40,7 @@ const Footer = () => {
           </Fade>
         </div>
         <div className="col-md-3">
-          <Fade bottom>
+          <Fade bottom delay={1500}>
             <h5>More BVA Auctions</h5>
           </Fade>
 
@@ -59,7 +59,7 @@ const Footer = () => {
           </Fade>
         </div>
         <div className="col-md-3">
-          <Fade bottom>
+          <Fade bottom delay={2000}>
             <h5>More BVA Auctions</h5>
           </Fade>
 
@@ -99,7 +99,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <Fade cascade delay={3000} bottom>
+          <Fade cascade delay={2500} bottom>
             <div className="extra-links">
               {/* <Link to="/">
             <img src="/assets/vectors/thuiswinkel.svg" alt="thuiswinkel" />

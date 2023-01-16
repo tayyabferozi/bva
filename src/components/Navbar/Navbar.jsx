@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   ChevronRightIcon,
@@ -11,6 +11,7 @@ import {
   XIcon,
 } from "@primer/octicons-react";
 import clsx from "clsx";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 
 import Button from "../Button";
 import Section from "../Section";
@@ -73,12 +74,27 @@ const categoryItems = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ isMenuActive, setIsMenuActive }) => {
   const navigate = useNavigate();
-  const [isMenuActive, setIsMenuActive] = useState(false);
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [smallMenuState, setSmallMenuState] = useState();
   const [isSmallMenuActive, setIsSmallMenuActive] = useState(false);
+
+  const menuListing = useRef();
+  const menuListing2 = useRef();
+  const categoryBtn = useRef();
+
+  useOnClickOutside(
+    menuListing,
+    () => {
+      setIsMenuActive(false);
+    },
+    categoryBtn
+  );
+
+  useOnClickOutside(menuListing2, () => {
+    setIsSmallMenuActive(false);
+  });
 
   return (
     <Section id="navbar">
@@ -90,7 +106,7 @@ const Navbar = () => {
         <XIcon size={24} />
       </div>
       <div className={clsx("menu-sm", isSmallMenuActive && "active")}>
-        <div className="main">
+        <div className="main" ref={menuListing2}>
           {smallMenuState === "categories" ? (
             <>
               <h2
@@ -109,7 +125,6 @@ const Navbar = () => {
                       key={"small-cate" + idx}
                       onClick={() => {
                         navigate("/category");
-                        setIsMenuActive(false);
                         setIsMenuActive(false);
                       }}
                     >
@@ -150,7 +165,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-main">
         <div className={clsx("menu-content", isMenuActive && "active")}>
-          <div className="items">
+          <div className="items" ref={menuListing}>
             {categoryItems.map((el, idx) => {
               return (
                 <div
@@ -158,7 +173,6 @@ const Navbar = () => {
                   key={"cateogyr-itsm" + idx}
                   onClick={() => {
                     navigate("/category");
-                    setIsMenuActive(false);
                     setIsMenuActive(false);
                   }}
                 >
@@ -171,12 +185,16 @@ const Navbar = () => {
         </div>
         <div className="left">
           <Link className="logo" to="/">
-            <img src="/assets/vectors/logo-white.svg" alt="logo" />
+            Logo
+            {/* <img src="/assets/vectors/logo-white.svg" alt="logo" /> */}
           </Link>
           <div className="nav-item menu-wrap">
             <div
-              className="menu-text"
-              onClick={() => setIsMenuActive(!isMenuActive)}
+              ref={categoryBtn}
+              className={clsx("menu-text", isMenuActive && "active")}
+              onClick={() => {
+                setIsMenuActive(!isMenuActive);
+              }}
             >
               Categories
               <ChevronDownIcon
@@ -205,7 +223,7 @@ const Navbar = () => {
               placeholder="What are you looking for?"
             />
             <div className="icon">
-              <SearchIcon size={24} fill="#f60" />
+              <SearchIcon size={24} fill="#ff6e31" />
             </div>
           </div>
         </div>
@@ -214,25 +232,26 @@ const Navbar = () => {
             Customer service
           </Link>
           <Button bordered to="/login">
-            <PersonIcon size={24} />
+            <PersonIcon size={20} />
             Login
           </Button>
         </div>
       </div>
       <div className="navbar-laptop">
-        <div className="item">
-          <img
+        <Link to="/" className="item">
+          Logo
+          {/* <img
             className="logo"
             src="/assets/vectors/logo-white.svg"
             alt="logo-white"
-          />
-        </div>
+          /> */}
+        </Link>
 
-        <div className="item">
+        <Link to="/all-auctions" className="item">
           <MegaphoneIcon size={24} />
 
           <div className="text">Auctions</div>
-        </div>
+        </Link>
 
         <div
           className="item"
@@ -243,11 +262,11 @@ const Navbar = () => {
           <div className="text">Search</div>
         </div>
 
-        <div className="item">
+        <Link to="/login" className="item">
           <PersonIcon size={24} />
 
           <div className="text">Login</div>
-        </div>
+        </Link>
 
         <div
           className="item"
@@ -275,7 +294,7 @@ const Navbar = () => {
             placeholder="What are you looking for?"
           />
           <div className="icon">
-            <SearchIcon size={24} fill="#f60" />
+            <SearchIcon size={24} fill="#ff6e31" />
           </div>
         </div>
       </div>

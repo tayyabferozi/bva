@@ -5,7 +5,7 @@ import {
   ChevronRightIcon,
 } from "@primer/octicons-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Grid, Navigation, Thumbs } from "swiper";
+import { Navigation, Thumbs } from "swiper";
 import { Link } from "react-router-dom";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";

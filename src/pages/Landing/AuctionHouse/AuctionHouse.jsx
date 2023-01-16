@@ -1,5 +1,7 @@
 import React from "react";
 import { CheckIcon } from "@primer/octicons-react";
+import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
 
 import Section from "../../../components/Section";
 import "./AuctionHouse.scss";
@@ -16,22 +18,28 @@ const AuctionHouse = () => {
   return (
     <Section id="landing-auction-house">
       <div className="auction-house-main">
-        <h3>The online auction house of Europe</h3>
+        <Fade>
+          <h3>The online auction house of Europe</h3>
+        </Fade>
 
         <div className="features">
-          {items.map((el, idx) => {
-            return (
-              <div key={"feature-item" + idx} className="item">
-                <div className="checkmark">
-                  <CheckIcon size={24} />
+          <Slide bottom cascade>
+            {items.map((el, idx) => {
+              return (
+                <div key={"feature-item" + idx} className="item">
+                  <div className="checkmark">
+                    <CheckIcon size={24} />
+                  </div>
+                  <h4 className="fs-22">{el}</h4>
                 </div>
-                <h4 className="fs-22">{el}</h4>
-              </div>
-            );
-          })}
+              );
+            })}
+          </Slide>
         </div>
         <div className="d-flex justify-content-center">
-          <Button orange>Auction something yourself?</Button>
+          <Button to="/become-a-seller" orange>
+            Auction something yourself?
+          </Button>
         </div>
       </div>
     </Section>

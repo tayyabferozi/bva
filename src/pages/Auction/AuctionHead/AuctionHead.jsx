@@ -10,7 +10,7 @@ const AuctionHead = () => {
       <div className="">
         <div>
           <h3 className="fs-22 mb-10">
-            Rinke Nijburg 'Made in England' tekening
+            Rinke Nijburg &apos;Made in England&apos; tekening
           </h3>
 
           <p>

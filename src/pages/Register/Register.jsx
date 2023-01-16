@@ -1,5 +1,4 @@
-import React, { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import { ChevronRightIcon } from "@primer/octicons-react";
 import clsx from "clsx";
 import { ArrowRightIcon, ArrowLeftIcon } from "@primer/octicons-react";

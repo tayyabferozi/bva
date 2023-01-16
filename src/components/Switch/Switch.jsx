@@ -2,11 +2,11 @@ import React from "react";
 
 import "./Switch.scss";
 
-const Switch = ({ label, ...rest }) => {
+const Switch = ({ ...rest }) => {
   return (
-    <label class="switch">
+    <label className="switch">
       <input type="checkbox" {...rest} />
-      <span class="slider round"></span>
+      <span className="slider round"></span>
     </label>
   );
 };

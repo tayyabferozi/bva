@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CheckboxIcon, SearchIcon } from "@primer/octicons-react";
+import { SearchIcon } from "@primer/octicons-react";
 
 import Accordion from "./Accordion";
 import Button from "../../../components/Button";
@@ -26,7 +26,7 @@ const MySettings = () => {
         </div>
         <div className="saved-searches-well">
           <div className="fs-14 fw-bold">
-            You don't have any saved searches yet
+            You don&apos;t have any saved searches yet
           </div>
           <div className="mt-2">
             When you save a search term on the search page, we will send you an
@@ -48,11 +48,11 @@ const MySettings = () => {
         panelHeading="With 1 click place a bid from the 'My lots' page"
       >
         <div className="">
-          If you activate "1-click bidding", you can place a bid on lots in your{" "}
-          <Link to="/dashboard/my-lots"> My lots</Link> overview with one click.
-          You will <strong>not</strong> see a confirmation screen and your bid
-          will be placed immediately, so you can bid on multiple lots in quick
-          succession.
+          If you activate &quot;1-click bidding&quot;, you can place a bid on
+          lots in your <Link to="/dashboard/my-lots"> My lots</Link> overview
+          with one click. You will <strong>not</strong> see a confirmation
+          screen and your bid will be placed immediately, so you can bid on
+          multiple lots in quick succession.
         </div>
         <div className="explanation-wrapper">
           <Button orange className="one-click">
@@ -65,7 +65,7 @@ const MySettings = () => {
         </div>
 
         <div className="mt-3 text-primary-1">
-          Please note: a "1-click bidding" bid is final
+          Please note: a &quot;1-click bidding&quot; bid is final
         </div>
 
         <div className="my-10">

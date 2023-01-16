@@ -1,11 +1,16 @@
-#landing-popular-lots {
-  .swiper {
-    padding-bottom: 40px;
+#landing-popular-lots,
+#landing-trending-lots {
+  .mySwiper {
+    padding: 10px 0 20px;
   }
 
   .swiper-slide {
     height: auto;
     width: 265px;
+
+    & > img {
+      object-fit: cover;
+    }
 
     .auction-item-card {
       width: 265px;

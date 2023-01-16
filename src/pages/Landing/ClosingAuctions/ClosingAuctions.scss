@@ -1,6 +1,10 @@
 #closing-auctions {
   padding: 80px 0;
 
+  .main-row {
+    --bs-gutter-y: 1rem;
+  }
+
   h3 {
     a {
       @media screen and (max-width: 767px) {

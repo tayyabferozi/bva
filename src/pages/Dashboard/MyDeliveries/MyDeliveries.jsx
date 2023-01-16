@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import { InfoIcon } from "@primer/octicons-react";
 
 import PageSize from "../../../components/PageSize";
@@ -18,7 +17,7 @@ const items = [
 ];
 
 const MyDeliveries = () => {
-  const [tabState, setTabState] = useState("Ready to Checkout");
+  // const [tabState, setTabState] = useState("Ready to Checkout");
 
   return (
     <div>

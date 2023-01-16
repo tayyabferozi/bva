@@ -6,7 +6,7 @@ import "./AuctionItemCard2.scss";
 
 const AuctionItemCard2 = ({ text, lots, location, img, time }) => {
   return (
-    <Link to="/" className="auction-item-card-2 no-dec">
+    <Link to="/auction" className="auction-item-card-2 no-dec">
       <h5 className="text-primary-1 d-lg-none d-block">{text}</h5>
 
       <div className="item-main">

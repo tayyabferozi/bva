@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { StackIcon, ClockIcon, CheckIcon } from "@primer/octicons-react";
+import Fade from "react-reveal/Fade";
 
 import Section from "../../../components/Section";
-import "./Product.scss";
 import Button from "../../../components/Button";
+import "./Product.scss";
 
 const items = [
   {
@@ -32,7 +33,7 @@ const items = [
 ];
 
 const msgs = [
-  "Europe's largest auction house",
+  "Largest auction house",
   "Choose your own price",
   "More than 160.000 lots per month",
 ];
@@ -41,54 +42,58 @@ const Product = () => {
   return (
     <Section id="landing-product">
       <div className="product">
-        <div
-          className="left"
-          style={{
-            backgroundImage: "url('/assets/imgs/28251v4.jpg')",
-          }}
-        >
+        <div className="left">
+          <img src="/assets/imgs/6212114.jpg" alt="bg" />
           <Button orange to="/all-auctions">
             All auctions
           </Button>
         </div>
         <div className="right">
-          {items.map((el, idx) => {
-            return (
-              <Link
-                to="/"
-                key={"product-item" + idx}
-                className="product-item no-dec"
-              >
-                <div className="text">
-                  <div className="top">
-                    <h5 className="text-primary-1">{el.title}</h5>
-                  </div>
+          <Fade right cascade>
+            <div>
+              {items.map((el, idx) => {
+                return (
+                  <Link
+                    to="/auction"
+                    key={"product-item" + idx}
+                    className="product-item no-dec"
+                  >
+                    <div className="text">
+                      <div className="top">
+                        <h5 className="text-primary-1">{el.title}</h5>
+                      </div>
 
-                  <div className="bottom">
-                    <div className="d-flex align-items-center gap-10 item">
-                      <StackIcon />
-                      <div className="fw-500">{el.lots} lots</div>
-                    </div>
-                    <div className="d-flex align-items-center gap-10 item">
-                      <ClockIcon />
-                      <div className="fw-500 closes">
-                        Closes in <span className="fw-600"> {el.date}</span>{" "}
+                      <div className="bottom">
+                        <div className="d-flex align-items-center gap-10 item">
+                          <StackIcon />
+                          <div className="fw-500">{el.lots} lots</div>
+                        </div>
+                        <div className="d-flex align-items-center gap-10 item">
+                          <ClockIcon />
+                          <div className="fw-500 closes">
+                            Closes in <span className="fw-600"> {el.date}</span>{" "}
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="imgs">
-                  <div className="imgs-main">
-                    {el.imgs.map((el2, idx2) => {
-                      return (
-                        <img key={"prod-" + idx + idx2} src={el2} alt="img" />
-                      );
-                    })}
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
+                    <div className="imgs">
+                      <div className="imgs-main">
+                        {el.imgs.map((el2, idx2) => {
+                          return (
+                            <img
+                              key={"prod-" + idx + idx2}
+                              src={el2}
+                              alt="img"
+                            />
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </Fade>
         </div>
       </div>
 

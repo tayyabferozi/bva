@@ -2,12 +2,10 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation } from "swiper";
 import { ArrowRightIcon, ArrowLeftIcon } from "@primer/octicons-react";
-import Fade from "react-reveal/Fade";
 
 import AuctionItemCard from "../../../components/AuctionItemCard/AuctionItemCard";
 import Section from "../../../components/Section";
 import useSwiperRef from "../../../hooks/useSwiperRef";
-import "./PopularLots.scss";
 
 const items = [
   {
@@ -152,14 +150,14 @@ const items = [
   },
 ];
 
-const PopularLots = () => {
+const TrendingLots = () => {
   const [nextEl, nextRef] = useSwiperRef();
   const [prevEl, prevRef] = useSwiperRef();
 
   return (
-    <Section id="landing-popular-lots">
+    <Section id="landing-trending-lots">
       <div className="d-flex justify-content-between">
-        <h3 className="mb-30">Popular lots</h3>
+        <h3 className="mb-30">Trending lots</h3>
 
         <div className="custom-navigation">
           <div className="nav-btn" ref={prevRef}>
@@ -171,29 +169,27 @@ const PopularLots = () => {
         </div>
       </div>
 
-      <Fade>
-        <Swiper
-          slidesPerView={"auto"}
-          spaceBetween={30}
-          freeMode={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[FreeMode, Navigation]}
-          className="mySwiper"
-          navigation={{ prevEl, nextEl }}
-        >
-          {items.map((el, idx) => {
-            return (
-              <SwiperSlide key={"popular-lot" + idx}>
-                <AuctionItemCard {...el} uniqueName="popularLot" idx={idx} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </Fade>
+      <Swiper
+        slidesPerView={"auto"}
+        spaceBetween={30}
+        freeMode={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[FreeMode, Navigation]}
+        className="mySwiper"
+        navigation={{ prevEl, nextEl }}
+      >
+        {items.map((el, idx) => {
+          return (
+            <SwiperSlide key={"trending-lot" + idx}>
+              <AuctionItemCard {...el} uniqueName="trendingLot" idx={idx} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </Section>
   );
 };
 
-export default PopularLots;
+export default TrendingLots;

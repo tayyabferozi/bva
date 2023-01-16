@@ -30,7 +30,7 @@ const MyLots = () => {
         </div>
       </div>
 
-      <div className="no-lots">You don't have any active lots</div>
+      <div className="no-lots">You don&apos;t have any active lots</div>
     </div>
   );
 };

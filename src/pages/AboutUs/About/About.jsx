@@ -9,8 +9,8 @@ const About = () => {
       <h3 className="text-primary-1">Always something to offer</h3>
 
       <p className="mt-20">
-        Whether you're looking for products that deserve a second chance or
-        something brand new, you'll find it here at BVA. Antiques or new
+        Whether you&apos;re looking for products that deserve a second chance or
+        something brand new, you&apos;ll find it here at BVA. Antiques or new
         furniture? A second-hand car? Another office building? Electronic
         equipment? As one of the largest online auction houses in Europe, we
         have a daily rotating range of items from return lots, residual stocks,

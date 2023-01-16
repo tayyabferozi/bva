@@ -2,7 +2,7 @@ import { createContext, useContext } from "react";
 
 const SelectContext = createContext({
   selectedOption: "",
-  changeSelectedOption: (option) => {},
+  changeSelectedOption: () => {},
 });
 
 const useSelectContext = () => {

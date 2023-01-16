@@ -1,12 +1,17 @@
 #footer {
   padding: 80px 0;
-  background: url("../../assets/vectors/bva-bg-pattern-white.svg") $color1;
+  // background: url("../../assets/vectors/bva-bg-pattern-white.svg") $color1;
+  background: url("../../assets/vectors/bva-bg-pattern-white.svg") $color2;
   background-blend-mode: overlay;
   color: #fff;
   font-size: 18px;
 
   @media screen and (max-width: 767px) {
     padding: 40px 0;
+  }
+
+  h5 {
+    // color: $color1;
   }
 
   .download-btns {
@@ -21,6 +26,13 @@
       display: block;
       margin-bottom: 18px;
       color: hsla(0, 0%, 100%, 0.9);
+
+      @include transitioned;
+
+      &:hover {
+        color: $color1;
+        text-decoration: none;
+      }
     }
   }
 

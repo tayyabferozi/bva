@@ -1,50 +1,78 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCarSide,
+  faMotorcycle,
+  faPalette,
+  faScrewdriverWrench,
+  faPlugCircleMinus,
+  faCouch,
+  faRing,
+  faHouse,
+  faEllipsis,
+  faUtensils,
+} from "@fortawesome/free-solid-svg-icons";
 
 import Section from "../Section";
 import "./Categories.scss";
 
 const categories = [
-  { id: 1, icon: "/assets/vectors/icons/cars.svg", name: "Vehicles" },
-  { id: 2, icon: "/assets/vectors/icons/bikes.svg", name: "Bikes & Scooters" },
-  { id: 3, icon: "/assets/vectors/icons/art.svg", name: "Art" },
-  { id: 4, icon: "/assets/vectors/icons/tools.svg", name: "Tools" },
+  {
+    id: 1,
+    icon: faCarSide,
+    name: "Vehicles",
+  },
+  { id: 2, icon: faMotorcycle, name: "Bikes & Scooters" },
+  { id: 3, icon: faPalette, name: "Art" },
+  { id: 4, icon: faScrewdriverWrench, name: "Tools" },
   {
     id: 5,
-    icon: "/assets/vectors/icons/consumer-electronics.svg",
+    icon: faPlugCircleMinus,
     name: "Consumer Electronics",
   },
   {
     id: 6,
-    icon: "/assets/vectors/icons/home-furnishings.svg",
+    icon: faCouch,
     name: "Home furnishings",
   },
   {
     id: 7,
-    icon: "/assets/vectors/icons/jewels.svg",
+    icon: faRing,
     name: "Jewels and Watches",
   },
-  { id: 8, icon: "/assets/vectors/icons/catering.svg", name: "Catering" },
-  { id: 9, icon: "/assets/vectors/icons/real-estate.svg", name: "Real Estate" },
+  { id: 8, icon: faUtensils, name: "Catering" },
+  { id: 9, icon: faHouse, name: "Real Estate" },
   {
     id: 10,
-    icon: "/assets/vectors/icons/all-categories.svg",
+    icon: faEllipsis,
     name: "All cat.",
   },
 ];
 
-const Categories = () => {
+const Categories = ({ setIsMenuActive }) => {
   return (
     <Section id="auction-categories">
-      <div className="auction-main">
-        {categories.map((el, idx) => {
-          return (
-            <div key={"category" + el.id} className="category-item">
-              <img src={el.icon} alt={el.name} />
-              <div className="text">{el.name}</div>
-            </div>
-          );
-        })}
-      </div>
+      <Fade bottom cascade>
+        <div className="auction-main">
+          {categories.map((el, idx) => {
+            return (
+              <div
+                key={"category" + idx}
+                className="category-item"
+                onClick={() => {
+                  if (el.name.includes("All cat")) {
+                    setIsMenuActive(true);
+                  }
+                }}
+              >
+                <FontAwesomeIcon icon={el.icon} size="xl" />
+                <div className="text">{el.name}</div>
+              </div>
+            );
+          })}
+        </div>
+      </Fade>
     </Section>
   );
 };

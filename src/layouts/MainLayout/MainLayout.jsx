@@ -5,10 +5,10 @@ import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import "./MainLayout.scss";
 
-const MainLayout = () => {
+const MainLayout = ({ isMenuActive, setIsMenuActive }) => {
   return (
     <div className="main-layout-wrap">
-      <Navbar />
+      <Navbar isMenuActive={isMenuActive} setIsMenuActive={setIsMenuActive} />
 
       <div className="main-layout-content">
         <Outlet />

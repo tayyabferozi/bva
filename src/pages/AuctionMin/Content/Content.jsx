@@ -287,7 +287,11 @@ const Content = () => {
                     key={"auction-category-card" + idx}
                     className="col-lg-4 col-sm-6"
                   >
-                    <AuctionItemCard {...el} />
+                    <AuctionItemCard
+                      {...el}
+                      uniqueName="auction-main"
+                      idx={idx}
+                    />
                   </div>
                 );
               })}

@@ -30,8 +30,8 @@ const Privacy = () => {
       <p>
         This is the Privacy and Cookie Statement of BVA Auctions is a trademark
         of TBAuctions Netherlands B.V. and is part of the TBAuctions Group
-        (hereinafter "<strong>TBAuctions</strong>"). Other brands of TBAuctions
-        are:
+        (hereinafter &quot;<strong>TBAuctions</strong>&quot;). Other brands of
+        TBAuctions are:
       </p>
       <br />
       <ul>
@@ -68,13 +68,13 @@ const Privacy = () => {
       <p>
         This Privacy Statement applies to all personal data processed by
         TBAuctions from anyone using our services, website or other applications
-        and mobile platforms ("Platform"), such as our visitors, bidders and
-        customers on all TBAuctions related domains, including all underlying
-        entities and subsidiaries. These personal data are processed in
-        accordance with applicable data protection legislation, more
+        and mobile platforms (&quot;Platform&quot;), such as our visitors,
+        bidders and customers on all TBAuctions related domains, including all
+        underlying entities and subsidiaries. These personal data are processed
+        in accordance with applicable data protection legislation, more
         specifically the EU Directive 2016/679, also known as the General Data
-        Protection Regulation ('AVG'), as well as any other future legislation
-        and additional national legislation.
+        Protection Regulation (&quot;AVG&quot;), as well as any other future
+        legislation and additional national legislation.
       </p>
       <br />
       <p>
@@ -104,10 +104,10 @@ const Privacy = () => {
       <br />
       <p>
         For the purposes described in this Privacy and Cookie Statement
-        ("Statement"), the above companies are considered "joint data
-        controllers", who together determine the means and purposes for the
-        collection, storage, disclosure, use and other types of processing of
-        personal data.
+        (&quot;Statement&quot;), the above companies are considered &quot;joint
+        data controllers&quot;, who together determine the means and purposes
+        for the collection, storage, disclosure, use and other types of
+        processing of personal data.
       </p>
     </Section>
   );

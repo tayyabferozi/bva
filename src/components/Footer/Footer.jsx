@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { StarIcon, StarFillIcon } from "@primer/octicons-react";
+import Fade from "react-reveal/Fade";
 
 import GridContainer from "../GridContainer";
 import Section from "../Section";
@@ -11,82 +12,85 @@ import Button from "../Button";
 const Footer = () => {
   return (
     <Section id="footer">
-      <GridContainer>
-        <div className="col-md-3">
-          <h5>Service &amp; contact</h5>
+      <Fade>
+        <GridContainer className="px-0">
+          <div className="col-md-3">
+            <h5>Service &amp; contact</h5>
 
-          <div className="links">
-            <Link to="/">Contact &amp; questions</Link>
-            <Link to="/register">Register</Link>
-            <Link to="/login">Login</Link>
+            <div className="links">
+              <Link to="/">Contact &amp; questions</Link>
+              <Link to="/register">Register</Link>
+              <Link to="/login">Login</Link>
+            </div>
           </div>
-        </div>
-        <div className="col-md-3">
-          <h5>More BVA Auctions</h5>
+          <div className="col-md-3">
+            <h5>More BVA Auctions</h5>
 
-          <div className="links">
-            <Link to="/about-us">About us</Link>
-            <Link to="/become-a-seller">Auction something yourself?</Link>
-            <Link to="/careers">Careers</Link>
+            <div className="links">
+              <Link to="/about-us">About us</Link>
+              <Link to="/become-a-seller">Auction something yourself?</Link>
+              <Link to="/careers">Careers</Link>
+            </div>
           </div>
-        </div>
-        <div className="col-md-3">
-          <h5>More BVA Auctions</h5>
+          <div className="col-md-3">
+            <h5>More BVA Auctions</h5>
 
-          <div className="ratings my-30">
-            <StarFillIcon size={20} />
-            <StarFillIcon size={20} />
-            <StarFillIcon size={20} />
-            <StarFillIcon size={20} />
-            <StarIcon size={20} />
+            <div className="ratings my-30">
+              <StarFillIcon size={20} />
+              <StarFillIcon size={20} />
+              <StarFillIcon size={20} />
+              <StarFillIcon size={20} />
+              <StarIcon size={20} />
+            </div>
+
+            <DownloadBtns />
           </div>
+          <div className="col-md-3">
+            <h5>More BVA Auctions</h5>
 
-          <DownloadBtns />
-        </div>
-        <div className="col-md-3">
-          <h5>More BVA Auctions</h5>
+            <p className="my-3">
+              Latest auctions and personal lots in your mailbox?
+            </p>
 
-          <p className="my-3">
-            Latest auctions and personal lots in your mailbox?
-          </p>
+            <Button className="d-inline-flex" to="/register" small orange>
+              Register
+            </Button>
+          </div>
+        </GridContainer>
 
-          <Button className="d-inline-flex" to="/register" small orange>
-            Register
-          </Button>
-        </div>
-      </GridContainer>
-
-      <div className="bottom">
-        <Link to="/">
-          <img src="/assets/vectors/logo-white-payoff.svg" alt="logo" />
-        </Link>
-
-        <div className="social">
-          <a rel="noreferrer" target="_blank" href="www.facebook.com">
-            <img src="/assets/imgs/facebook.png" alt="facebook" />
-          </a>
-          <a rel="noreferrer" target="_blank" href="www.facebook.com">
-            <img src="/assets/imgs/youtube.png" alt="youtube" />
-          </a>
-          <a rel="noreferrer" target="_blank" href="www.facebook.com">
-            <img src="/assets/imgs/linkedin.png" alt="linkedin" />
-          </a>
-          <a rel="noreferrer" target="_blank" href="www.facebook.com">
-            <img src="/assets/imgs/instagram.png" alt="instagram" />
-          </a>
-        </div>
-
-        <div className="extra-links">
+        <div className="bottom">
           <Link to="/">
+            Logo
+            {/* <img src="/assets/vectors/logo-white-payoff.svg" alt="logo" /> */}
+          </Link>
+
+          <div className="social">
+            <a rel="noreferrer" target="_blank" href="www.facebook.com">
+              <img src="/assets/imgs/facebook.png" alt="facebook" />
+            </a>
+            <a rel="noreferrer" target="_blank" href="www.facebook.com">
+              <img src="/assets/imgs/youtube.png" alt="youtube" />
+            </a>
+            <a rel="noreferrer" target="_blank" href="www.facebook.com">
+              <img src="/assets/imgs/linkedin.png" alt="linkedin" />
+            </a>
+            <a rel="noreferrer" target="_blank" href="www.facebook.com">
+              <img src="/assets/imgs/instagram.png" alt="instagram" />
+            </a>
+          </div>
+
+          <div className="extra-links">
+            {/* <Link to="/">
             <img src="/assets/vectors/thuiswinkel.svg" alt="thuiswinkel" />
             Thuiswinkel waarborg
-          </Link>
-          <Link to="/privacy">Privacy and Cookie conditions</Link>
-          <Link to="/terms">General terms and conditions</Link>
-          <Link to="/disclaimer">Disclaimer</Link>
-          <div>&copy; BVA Auctions 2013</div>
+          </Link> */}
+            <Link to="/privacy">Privacy and Cookie conditions</Link>
+            <Link to="/terms">General terms and conditions</Link>
+            <Link to="/disclaimer">Disclaimer</Link>
+            <div>&copy; BVA Auctions 2013</div>
+          </div>
         </div>
-      </div>
+      </Fade>
     </Section>
   );
 };

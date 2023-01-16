@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { InfoIcon } from "@primer/octicons-react";
 
 import PageSize from "../../../components/PageSize";

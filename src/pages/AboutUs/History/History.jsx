@@ -1,6 +1,6 @@
 import React from "react";
-import GridContainer from "../../../components/GridContainer";
 
+import GridContainer from "../../../components/GridContainer";
 import Section from "../../../components/Section";
 import "./History.scss";
 
@@ -14,15 +14,15 @@ const History = () => {
           <p>
             2003. The moment it all started online. From the physical auctions
             that we held in a room in 1999 to online auctions on a website. It
-            doesn't seem that long ago, but in that short period of time, we
-            have grown considerably. Initially, we focused on bankruptcies and
-            auctions that we organise for the various government departments.
-            You may well know us from that too. In the meantime, we already have
-            more to offer, and we are growing fast. For example, we have offices
-            in several countries and, in addition to new products and return
-            goods, we also auction art and antiques, cars and real estate. In
-            2018 we merged with industrial auction house Troostwijk, and
-            together we belong to the TB Auctions group.
+            doesn&apos;t seem that long ago, but in that short period of time,
+            we have grown considerably. Initially, we focused on bankruptcies
+            and auctions that we organise for the various government
+            departments. You may well know us from that too. In the meantime, we
+            already have more to offer, and we are growing fast. For example, we
+            have offices in several countries and, in addition to new products
+            and return goods, we also auction art and antiques, cars and real
+            estate. In 2018 we merged with industrial auction house Troostwijk,
+            and together we belong to the TB Auctions group.
           </p>
         </div>
 

@@ -55,7 +55,7 @@ const Terms = () => {
         <h1 className="mt-40">General Thuiswinkel Terms and Conditions</h1>
         <p>
           These General Conditions of the Nederlandse Thuiswinkel Organisatie
-          have been established in consultation with the Dutch Consumers'
+          have been established in consultation with the Dutch Consumers&apos;
           Association [Consumentenbond] in the context of the Coördinatiegroep
           Zelfreguleringsoverleg (CZ) [Group coordinating the Consultation on
           Self-Regulation] of the Social and Economic Council and are effective

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import ScrollToTop from "./components/ScrollToTop";
 import MainLayout from "./layouts/MainLayout/MainLayout";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Landing from "./pages/Landing";
@@ -22,13 +23,33 @@ import MyDeliveries from "./pages/Dashboard/MyDeliveries";
 import PersonalInformation from "./pages/Dashboard/PersonalInformation";
 import MySettings from "./pages/Dashboard/MySettings";
 import Auction from "./pages/Auction";
+import { useState } from "react";
 
 const AppRoutes = () => {
+  const [isMenuActive, setIsMenuActive] = useState(false);
+
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<Landing />} />
+        <Route
+          path="/"
+          element={
+            <MainLayout
+              isMenuActive={isMenuActive}
+              setIsMenuActive={setIsMenuActive}
+            />
+          }
+        >
+          <Route
+            index
+            element={
+              <Landing
+                isMenuActive={isMenuActive}
+                setIsMenuActive={setIsMenuActive}
+              />
+            }
+          />
           <Route path="/category" element={<Category />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -41,6 +62,7 @@ const AppRoutes = () => {
           <Route path="/how-bidding-works" element={<HowItWorks />} />
           <Route path="/auction" element={<Auction />} />
         </Route>
+        <Route path="/become-a-seller" element={<BecomeSeller />} />
         <Route path="/dashboard" element={<MainLayout />}>
           <Route path="/dashboard" element={<DashboardLayout />}>
             <Route path="/dashboard/my-lots" element={<MyLots />} />
@@ -55,8 +77,6 @@ const AppRoutes = () => {
             <Route path="/dashboard/my-settings" element={<MySettings />} />
           </Route>
         </Route>
-
-        <Route path="/become-a-seller" element={<BecomeSeller />} />
       </Routes>
     </Router>
   );

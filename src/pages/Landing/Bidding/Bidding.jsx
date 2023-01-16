@@ -1,6 +1,8 @@
 import React from "react";
-import Button from "../../../components/Button";
+import Fade from "react-reveal/Fade";
+import Flip from "react-reveal/Flip";
 
+import Button from "../../../components/Button";
 import Section from "../../../components/Section";
 import "./Bidding.scss";
 
@@ -25,22 +27,30 @@ const Bidding = () => {
       <div className="bidding-main">
         <h3 className="mb-40">How does bidding work?</h3>
 
-        <div className="steps">
-          {steps.map((el, idx) => {
-            return (
-              <div key={"step-item" + idx} className="step-item">
-                <div className="number">{idx + 1}</div>
-                <div className="fs-22 fw-700 mb-10">{el.title}</div>
-                <p>{el.text}</p>
-              </div>
-            );
-          })}
-        </div>
+        <Fade cascade bottom>
+          <div className="steps">
+            {steps.map((el, idx) => {
+              return (
+                <div key={"step-item" + idx} className="step-item">
+                  <div className="number">{idx + 1}</div>
+                  <div className="fs-22 fw-700 mb-10">{el.title}</div>
+                  <p>{el.text}</p>
+                </div>
+              );
+            })}
+          </div>
+        </Fade>
 
-        <div className="btns">
-          <Button orange>Sign up for free</Button>
-          <Button whiteBlue>Sign up for free</Button>
-        </div>
+        <Flip cascade top>
+          <div className="btns">
+            <Button orange to="/register">
+              Sign up for free
+            </Button>
+            <Button whiteBlue to="/how-bidding-works">
+              View game rules
+            </Button>
+          </div>
+        </Flip>
       </div>
     </Section>
   );

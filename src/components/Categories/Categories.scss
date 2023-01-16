@@ -26,11 +26,20 @@
         flex-shrink: 0;
       }
 
+      svg {
+        @include transitioned;
+
+        &,
+        * {
+          color: $color1;
+        }
+      }
+
       &:hover {
         cursor: pointer;
 
-        .text {
-          text-decoration: underline;
+        svg {
+          transform: translateY(-4px);
         }
       }
 
@@ -41,7 +50,7 @@
       .text {
         margin-top: 4px;
         font-size: 14px;
-        color: $color11;
+        color: $color1;
         font-weight: 500;
       }
     }

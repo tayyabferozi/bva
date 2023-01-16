@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ClockIcon, StackIcon, LocationIcon } from "@primer/octicons-react";
 
 import "./AuctionItemCard3.scss";
 
-const AuctionItemCard2 = ({ lotNumber, title, img, time, price, bids }) => {
+const AuctionItemCard2 = ({ lotNumber, title, img, time, bids }) => {
   return (
     <Link to="/" className="auction-item-card-3 no-dec">
       <div className="item-main">

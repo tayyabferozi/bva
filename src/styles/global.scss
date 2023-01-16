@@ -42,22 +42,12 @@ input {
   gap: 4px;
 
   * {
-    color: $color6;
+    color: $color1;
   }
 }
 
 p {
   line-height: 1.5;
-}
-
-ol,
-ul {
-  margin-left: 40px;
-  margin-bottom: 10px;
-
-  li {
-    margin-bottom: 6px;
-  }
 }
 
 .btn.one-click {

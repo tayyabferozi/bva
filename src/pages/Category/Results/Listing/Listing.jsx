@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  ListUnorderedIcon,
-  ArrowLeftIcon,
-  ArrowRightIcon,
-} from "@primer/octicons-react";
+import { ArrowLeftIcon, ArrowRightIcon } from "@primer/octicons-react";
 import ReactPaginate from "react-paginate";
 
 import AuctionItemCard from "../../../../components/AuctionItemCard";
@@ -223,16 +219,23 @@ const sorts = [
 const Listing = ({ setShowFilters }) => {
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
-  const [itemOffset, setItemOffset] = useState(0);
+  const [
+    ,
+    // itemOffset
+    setItemOffset,
+  ] = useState(0);
 
-  const [itemsPerPage, setItemsPerPage] = useState(5);
+  const [
+    itemsPerPage,
+    // setItemsPerPage
+  ] = useState(5);
 
   // Simulate fetching items from another resources.
   // (This could be items from props; or items loaded in a local state
   // from an API endpoint with useEffect and useState)
-  const endOffset = itemOffset + itemsPerPage;
+  // const endOffset = itemOffset + itemsPerPage;
   // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentItems = items.slice(itemOffset, endOffset);
+  // const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
   // Invoke when user click to request another page.
@@ -286,7 +289,11 @@ const Listing = ({ setShowFilters }) => {
                 key={"auction-category-card" + idx}
                 className="col-lg-4 col-sm-6"
               >
-                <AuctionItemCard {...el} />
+                <AuctionItemCard
+                  {...el}
+                  uniqueName="category-listing"
+                  idx={idx}
+                />
               </div>
             );
           })}

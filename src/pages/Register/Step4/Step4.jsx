@@ -36,7 +36,7 @@ const Step4 = ({ decStep }) => {
         Resend code
       </Button>
       <p className="fs-14 mt-2">
-        Still haven't received your SMS code? Read here what might be going
+        Still haven&apos;t received your SMS code? Read here what might be going
         wrong
       </p>
     </div>

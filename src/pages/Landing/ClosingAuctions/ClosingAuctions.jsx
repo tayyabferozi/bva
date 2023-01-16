@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "@primer/octicons-react";
+import HeadShake from "react-reveal/HeadShake";
+import Slide from "react-reveal/Slide";
 
-import GridContainer from "../../../components/GridContainer";
 import Section from "../../../components/Section";
 import "./ClosingAuctions.scss";
 import AuctionItemCard2 from "../../../components/AuctionItemCard2";
@@ -41,26 +42,32 @@ const items = [
 const ClosingAuctions = () => {
   return (
     <Section id="closing-auctions">
-      <h3>
-        These auctions will close soon{" "}
-        <Link
-          className="text-primary-1 ms-50 fw-500 d-inline-flex align-items-center"
-          to="/"
-        >
-          View all auctions <ArrowRightIcon className="ms-10" size={26} />
-        </Link>{" "}
-      </h3>
+      <HeadShake>
+        <h3>
+          These auctions will close soon{" "}
+          <Link
+            className="text-primary-1 ms-50 fw-500 d-inline-flex align-items-center"
+            to="/auction-min"
+          >
+            View all auctions <ArrowRightIcon className="ms-10" size={26} />
+          </Link>{" "}
+        </h3>
+      </HeadShake>
 
       <div className="items mt-30">
-        <GridContainer>
-          {items.map((el, idx) => {
-            return (
-              <div key={"closing-auc" + idx} className="col-md-6">
-                <AuctionItemCard2 {...el} />
-              </div>
-            );
-          })}
-        </GridContainer>
+        <div className="container-fluid px-0">
+          <Slide bottom cascade>
+            <div className="row">
+              {items.map((el, idx) => {
+                return (
+                  <div key={"closing-auc" + idx} className="col-md-6">
+                    <AuctionItemCard2 {...el} />
+                  </div>
+                );
+              })}
+            </div>
+          </Slide>
+        </div>
       </div>
     </Section>
   );

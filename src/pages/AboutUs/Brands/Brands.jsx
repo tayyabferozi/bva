@@ -13,7 +13,8 @@ const Brands = () => {
         <GridContainer>
           <div className="col-md-6">
             <div className="card">
-              <img src="/assets/vectors/logo.svg" alt="logo" />
+              {/* <img src="/assets/vectors/logo.svg" alt="logo" /> */}
+              Logo
             </div>
           </div>
           <div className="col-md-6">

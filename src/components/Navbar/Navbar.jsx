@@ -185,8 +185,8 @@ const Navbar = ({ isMenuActive, setIsMenuActive }) => {
         </div>
         <div className="left">
           <Link className="logo" to="/">
-            Logo
-            {/* <img src="/assets/vectors/logo-white.svg" alt="logo" /> */}
+            {/* Logo */}
+            <img src="/assets/vectors/logo-white.svg" alt="logo" />
           </Link>
           <div className="nav-item menu-wrap">
             <div
@@ -223,7 +223,7 @@ const Navbar = ({ isMenuActive, setIsMenuActive }) => {
               placeholder="What are you looking for?"
             />
             <div className="icon">
-              <SearchIcon size={24} fill="#ff6e31" />
+              <SearchIcon size={24} fill="#03c988" />
             </div>
           </div>
         </div>
@@ -294,7 +294,7 @@ const Navbar = ({ isMenuActive, setIsMenuActive }) => {
             placeholder="What are you looking for?"
           />
           <div className="icon">
-            <SearchIcon size={24} fill="#ff6e31" />
+            <SearchIcon size={24} fill="#03c988" />
           </div>
         </div>
       </div>

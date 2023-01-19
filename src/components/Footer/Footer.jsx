@@ -80,8 +80,7 @@ const Footer = () => {
       <Fade cascade delay={2000} bottom>
         <div className="bottom">
           <Link to="/">
-            Logo
-            {/* <img src="/assets/vectors/logo-white-payoff.svg" alt="logo" /> */}
+            <img src="/assets/vectors/logo.svg" alt="logo" />
           </Link>
 
           <div className="social">

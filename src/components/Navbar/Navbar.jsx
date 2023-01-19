@@ -239,12 +239,12 @@ const Navbar = ({ isMenuActive, setIsMenuActive }) => {
       </div>
       <div className="navbar-laptop">
         <Link to="/" className="item">
-          Logo
-          {/* <img
+          {/* Logo */}
+          <img
             className="logo"
             src="/assets/vectors/logo-white.svg"
             alt="logo-white"
-          /> */}
+          />
         </Link>
 
         <Link to="/all-auctions" className="item">

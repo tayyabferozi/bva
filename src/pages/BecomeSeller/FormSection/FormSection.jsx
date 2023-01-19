@@ -70,8 +70,8 @@ const FormSection = () => {
       <div className="main">
         <div className="left">
           <div className="top">
-            {/* <img src="/assets/imgs/logo.png" alt="logo" /> */}
-            Logo
+            <img src="/assets/vectors/logo.svg" alt="logo" />
+            {/* Logo */}
             {features.map((el, idx) => {
               return (
                 <div className="item" key={"form-left-text-item" + idx}>

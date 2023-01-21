@@ -20,7 +20,7 @@ const Auction = () => {
         <Discover />
       </div>
       <Bidding />
-      <Downlaod />
+      {/* <Downlaod /> */}
       <Support />
     </div>
   );

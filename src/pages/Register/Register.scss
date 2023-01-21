@@ -72,4 +72,21 @@
       justify-content: center;
     }
   }
+
+  .congrats {
+    text-align: center;
+    padding: 100px 0;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 70px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
 }

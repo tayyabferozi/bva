@@ -3,7 +3,7 @@ import { StarIcon, StarFillIcon } from "@primer/octicons-react";
 import Fade from "react-reveal/Fade";
 
 import Section from "../../components/Section";
-import DownloadBtns from "../../components/DownloadBtns";
+// import DownloadBtns from "../../components/DownloadBtns";
 import "./Download.scss";
 
 const Download = () => {
@@ -36,7 +36,7 @@ const Download = () => {
             <div className="download-from">
               <h5>Download from:</h5>
 
-              <DownloadBtns />
+              {/* <DownloadBtns /> */}
             </div>
           </div>
         </Fade>

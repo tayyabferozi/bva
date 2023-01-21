@@ -5,9 +5,9 @@ import Fade from "react-reveal/Fade";
 
 import GridContainer from "../GridContainer";
 import Section from "../Section";
-import "./Footer.scss";
-import DownloadBtns from "../DownloadBtns";
+// import DownloadBtns from "../DownloadBtns";
 import Button from "../Button";
+import "./Footer.scss";
 
 const Footer = () => {
   return (
@@ -54,9 +54,9 @@ const Footer = () => {
             </div>
           </Fade>
 
-          <Fade delay={1750} bottom>
+          {/* <Fade delay={1750} bottom>
             <DownloadBtns />
-          </Fade>
+          </Fade> */}
         </div>
         <div className="col-md-3">
           <Fade bottom delay={2000}>

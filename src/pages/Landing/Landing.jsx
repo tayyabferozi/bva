@@ -29,7 +29,7 @@ const Landing = ({ isMenuActive, setIsMenuActive }) => {
       <Bidding />
       <ClosingAuctions />
       <AuctionHouse />
-      <Downlaod />
+      {/* <Downlaod /> */}
       <Support />
     </div>
   );

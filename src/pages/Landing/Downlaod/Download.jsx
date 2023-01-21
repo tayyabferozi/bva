@@ -2,8 +2,8 @@ import React from "react";
 import { StarIcon, StarFillIcon } from "@primer/octicons-react";
 
 import Section from "../../components/Section";
+// import DownloadBtns from "../../components/DownloadBtns";
 import "./Download.scss";
-import DownloadBtns from "../../components/DownloadBtns";
 
 const Download = () => {
   return (
@@ -32,7 +32,7 @@ const Download = () => {
           <div className="download-from">
             <h5>Download from:</h5>
 
-            <DownloadBtns />
+            {/* <DownloadBtns /> */}
           </div>
         </div>
       </div>

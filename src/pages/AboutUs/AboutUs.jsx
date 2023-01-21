@@ -28,7 +28,7 @@ const AboutUs = () => {
       <History />
       <Brands />
       <Feedback grey />
-      <Downlaod />
+      {/* <Downlaod /> */}
       <Support />
     </div>
   );

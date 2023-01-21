@@ -18,7 +18,7 @@ const Button = ({
   ...rest
 }) => {
   const classes = clsx(
-    "btn",
+    "c-btn",
     className,
     small && "btn-small",
     bordered && "btn-bordered",

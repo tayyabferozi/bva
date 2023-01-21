@@ -20893,7 +20893,7 @@ a {
   z-index: 1;
 }
 
-#app a {
+/* #app a {
   text-decoration: none !important;
 }
 
@@ -20905,4 +20905,4 @@ a {
 #app .icon i {    
   position: relative;
   top: -2px;
-}
+} */

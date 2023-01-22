@@ -66,10 +66,10 @@ var Sidebar = /*#__PURE__*/function () {
       var _this = this;
       // add event listener to sidebar
       document.querySelectorAll(".burger-btn").forEach(function (el) {
-        return el.addEventListener("click", _this.toggle.bind(_this));
+        // return el.addEventListener("click", _this.toggle.bind(_this));
       });
       document.querySelectorAll(".sidebar-hide").forEach(function (el) {
-        return el.addEventListener("click", _this.toggle.bind(_this));
+        // return el.addEventListener("click", _this.toggle.bind(_this));
       });
       window.addEventListener("resize", this.onResize.bind(this));
 

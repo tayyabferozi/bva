@@ -345,14 +345,14 @@
   }
 }
 
-@charset "UTF-8";
+
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-:root {
+ body #root #app :root {
   --bs-blue: #435ebe;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -432,7 +432,7 @@
   }
 }
 
-body {
+body #root #app {
   margin: 0;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
@@ -443,6 +443,34 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body #root #app * {
+  font-family: Nunito;
+}
+
+body #root #app {
+  background-color: #f2f7ff;
+}
+
+body #root #app a {
+  text-decoration: none;
+}
+
+body #root #app a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1199px) { 
+  body #root #app .main-page-title {
+    margin-top: 56px;
+  }
+}
+
+body #root #app #hamburger {
+  position: absolute;
+  left: 32px;
+  top: 32px;
 }
 
 hr {
@@ -2549,6 +2577,9 @@ textarea.form-control-lg {
   min-height: 1.5rem;
   padding-left: 1.7em;
   margin-bottom: 0.125rem;
+}
+.form-check label {
+  margin-top: 1.5px;
 }
 .form-check .form-check-input {
   float: left;
@@ -20117,7 +20148,7 @@ body .bi::before, [class^=bi-]::before, [class*=" bi-"]::before {
   content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9" style="fill:none;stroke:white;stroke-width:1"></polyline></svg>');
 }
 .sidebar-wrapper .menu .sidebar-item.active > .sidebar-link {
-  background-color: #435ebe;
+  background-color: #03c988;
 }
 .sidebar-wrapper .menu .sidebar-item.active > .sidebar-link span {
   color: #fff;
@@ -20892,6 +20923,15 @@ a {
 .z-1 {
   z-index: 1;
 }
+
+/* body #root #app {
+  background-color: #f2f7ff;
+}
+
+body #root #app a {
+  text-decoration: none;
+} */
+
 
 /* #app a {
   text-decoration: none !important;

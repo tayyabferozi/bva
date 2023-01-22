@@ -2,25 +2,53 @@ import clsx from "clsx";
 import React, { useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import isEmpty from "../../utils/is-empty";
 
 const navItems = [
   {
-    label: "Menu",
+    label: "General",
     heading: true,
   },
   {
-    // icon: "bi bi-grid-fill",
+    icon: "bi bi-grid-fill",
+    label: "Overview",
+    link: "/overview",
+  },
+  {
     icon: "bi bi-arrow-repeat",
     label: "Transactions",
     link: "/transactions",
+  },
+  {
+    label: "Products",
+    heading: true,
+  },
+  {
+    icon: "bi bi-currency-dollar",
+    label: "Categories",
+    dir: "/categories",
+    subMenu: [
+      {
+        label: "Create category",
+        link: "/categories/create-category",
+      },
+      {
+        label: "All Categories",
+        link: "/categories/all-categories",
+      },
+    ],
   },
   {
     icon: "bi bi-currency-dollar",
     label: "Auctions",
     dir: "/auctions",
     subMenu: [
+      {
+        label: "Create Auction",
+        link: "/auctions/create-auction",
+      },
       {
         label: "All Auctions",
         link: "/auctions/all-auctions",
@@ -40,6 +68,10 @@ const navItems = [
     ],
   },
   {
+    label: "People",
+    heading: true,
+  },
+  {
     icon: "bi bi-trophy-fill",
     label: "Winners",
     link: "/winners",
@@ -56,7 +88,17 @@ const navItems = [
   {
     icon: "bi bi-exclamation-circle",
     label: "E-Tickets",
-    link: "/e-ticket",
+    dir: "/e-tickets",
+    subMenu: [
+      {
+        label: "All E-Tickets",
+        link: "/e-tickets/all-auctions",
+      },
+      {
+        label: "E-Ticket",
+        link: "/e-tickets/ticket",
+      },
+    ],
   },
 ];
 
@@ -81,10 +123,10 @@ const AdminDashboardLayout = () => {
   // };
 
   useEffect(() => {
-    addScript("/assets/js/initTheme.js", "initTheme");
-    addScript("/assets/js/bootstrap.js", "bootstrap");
-    addScript("/assets/js/mazer.js", "mazer");
-    addScript("/assets/js/app.js", "appMain");
+    // addScript("/assets/js/initTheme.js", "initTheme");
+    // addScript("/assets/js/bootstrap.js", "bootstrap");
+    // addScript("/assets/js/mazer.js", "mazer");
+    // addScript("/assets/js/app.js", "appMain");
 
     return () => {
       // removeScript("initTheme");
@@ -96,6 +138,12 @@ const AdminDashboardLayout = () => {
 
   return (
     <div id="app">
+      <Helmet>
+        <script src="/assets/js/initTheme.js"></script>
+        <script src="/assets/js/bootstrap.js"></script>
+        <script src="/assets/js/mazer.js"></script>
+        <script src="/assets/js/app.js"></script>
+      </Helmet>
       <div id="sidebar" className="active">
         <div className="sidebar-wrapper active">
           <div className="sidebar-header position-relative">
@@ -225,70 +273,16 @@ const AdminDashboardLayout = () => {
                   </li>
                 );
               })}
-
-              {/* <li className="sidebar-item has-sub">
-                <a href="#" className="sidebar-link">
-                  <i className=""></i>
-                  <span>Components</span>
-                </a>
-                <ul className="submenu">
-                  <li className="submenu-item">
-                    <a href="component-accordion.html">Accordion</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-alert.html">Alert</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-badge.html">Badge</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-breadcrumb.html">Breadcrumb</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-button.html">Button</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-card.html">Card</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-carousel.html">Carousel</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-collapse.html">Collapse</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-dropdown.html">Dropdown</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-list-group.html">List Group</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-modal.html">Modal</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-navs.html">Navs</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-pagination.html">Pagination</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-progress.html">Progress</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-spinner.html">Spinner</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-toasts.html">Toasts</a>
-                  </li>
-                  <li className="submenu-item">
-                    <a href="component-tooltip.html">Tooltip</a>
-                  </li>
-                </ul>
-              </li> */}
             </ul>
           </div>
         </div>
       </div>
+
+      <header id="hamburger" className="mb-3">
+        <a href="#" className="burger-btn d-block d-xl-none">
+          <i className="bi bi-justify fs-3"></i>
+        </a>
+      </header>
       <Outlet />
     </div>
   );

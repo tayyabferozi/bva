@@ -31,14 +31,20 @@ import MySettings from "./pages/Dashboard/MySettings";
 import Auction from "./pages/Auction";
 import Congrats from "./pages/Congrats";
 import AdminDashboardLayout from "./layouts/AdminDashboardLayout/AdminDashboardLayout";
+import AdminOverview from "./pages/AdminDashboard/Overview";
 import AdminTransactions from "./pages/AdminDashboard/Transactions";
 import AdminAllAuctions from "./pages/AdminDashboard/Auctions/AllAuctions";
 import AdminRunningAuctions from "./pages/AdminDashboard/Auctions/RunningAuctions";
 import AdminClosedAuctions from "./pages/AdminDashboard/Auctions/ClosedAuctions";
 import AdminUpcomingAuctions from "./pages/AdminDashboard/Auctions/UpcomingAuctions";
-import AdminETicket from "./pages/AdminDashboard/ETicket";
 import AdminAuctionWinners from "./pages/AdminDashboard/Winners";
 import AdminUsers from "./pages/AdminDashboard/Users";
+import AdminAllETickets from "./pages/AdminDashboard/ETicket/AllTickets";
+import AdminTicket from "./pages/AdminDashboard/ETicket/Ticket";
+import CreateAuction from "./pages/AdminDashboard/Auctions/CreateAuction";
+import AdminAllCategories from "./pages/AdminDashboard/Categories/AllCategories";
+import AdminCreateCategory from "./pages/AdminDashboard/Categories/CreateCategory";
+import AdminLogin from "./pages/AdminDashboard/Login";
 
 const AppRoutes = () => {
   const [isMenuActive, setIsMenuActive] = useState(false);
@@ -95,22 +101,38 @@ const AppRoutes = () => {
           </Route>
         </Route>
         <Route path="admin" element={<AdminDashboardLayout />}>
-          <Route path="*" element={<Navigate to="/admin/transactions" />} />
+          <Route path="*" element={<Navigate to="/admin/overview" />} />
+          <Route path="overview" element={<AdminOverview />} />
           <Route
             index
             element={<Navigate to="/admin/transactions" replace />}
           />
           <Route path="transactions" element={<AdminTransactions />} />
-          <Route path="auctions/all-auctions" element={<AdminAllAuctions />} />
-          <Route
-            path="auctions/running-auctions"
-            element={<AdminRunningAuctions />}
-          />
-          <Route path="auctions/closed-auctions" element={<AdminClosedAuctions />} />
-          <Route path="auctions/upcoming-auctions" element={<AdminUpcomingAuctions />} />
+          <Route path="auctions">
+            <Route path="create-auction" element={<CreateAuction />} />
+            <Route path="all-auctions" element={<AdminAllAuctions />} />
+            <Route path="running-auctions" element={<AdminRunningAuctions />} />
+            <Route path="closed-auctions" element={<AdminClosedAuctions />} />
+            <Route
+              path="upcoming-auctions"
+              element={<AdminUpcomingAuctions />}
+            />
+          </Route>
+          <Route path="categories">
+            <Route path="create-category" element={<AdminCreateCategory />} />
+            <Route path="all-categories" element={<AdminAllCategories />} />
+          </Route>
           <Route path="winners" element={<AdminAuctionWinners />} />
           <Route path="users" element={<AdminUsers />} />
-          <Route path="e-ticket" element={<AdminETicket />} />
+          <Route path="admin-login" element={<AdminUsers />} />
+          <Route path="e-tickets">
+            <Route path="all-auctions" element={<AdminAllETickets />} />
+            <Route path="ticket" element={<AdminTicket />} />
+          </Route>
+        </Route>
+
+        <Route path="admin">
+          <Route path="login" element={<AdminLogin />} />
         </Route>
       </Routes>
     </Router>

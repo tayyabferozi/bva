@@ -9,7 +9,7 @@ import PopularLots from "./PopularLots";
 import TrendingLots from "./TrendingLots";
 import ClosingAuctions from "./ClosingAuctions";
 import Bidding from "./Bidding/Bidding";
-import Downlaod from "../../partials/Downlaod";
+// import Downlaod from "../../partials/Downlaod";
 import AuctionHouse from "./AuctionHouse";
 import Support from "../../partials/Support";
 

@@ -38,7 +38,7 @@ const RunningAuctions = () => {
           <div className="col-12">
             <div className="card">
               <div className="card-header">
-                <h4 className="card-title"></h4>
+                <h4 className="card-title">Auctions</h4>
               </div>
               <div className="card-content">
                 {/* <!-- table head dark --> */}

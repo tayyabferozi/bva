@@ -1,49 +1,63 @@
 import React from "react";
+import {
+  faCarSide,
+  faMotorcycle,
+  faPalette,
+  faScrewdriverWrench,
+  faPlugCircleMinus,
+  faCouch,
+  faRing,
+  faHouse,
+  faEllipsis,
+  faUtensils,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import AdminDashboard from "../../AdminDashboard";
+import AdminDashboard from "../../../AdminDashboard";
 
-const auctions = [
+const categories = [
   {
-    img: "/assets/imgs/1.jpg",
-    name: "2 Ledstralers 50w",
-    amount: "15",
-    date: "21/1/2023",
+    id: 1,
+    icon: faCarSide,
+    name: "Vehicles",
+  },
+  { id: 2, icon: faMotorcycle, name: "Bikes & Scooters" },
+  { id: 3, icon: faPalette, name: "Art" },
+  { id: 4, icon: faScrewdriverWrench, name: "Tools" },
+  {
+    id: 5,
+    icon: faPlugCircleMinus,
+    name: "Consumer Electronics",
   },
   {
-    img: "/assets/imgs/1.jpg",
-    name: "20 Kunststof duimstokken a 1mtr",
-    amount: "15",
-    date: "21/1/2023",
+    id: 6,
+    icon: faCouch,
+    name: "Home furnishings",
   },
   {
-    img: "/assets/imgs/1.jpg",
-    name: "Michelin luchtcompressor 24 ...",
-    amount: "15",
-    date: "21/1/2023",
+    id: 7,
+    icon: faRing,
+    name: "Jewels and Watches",
   },
+  { id: 8, icon: faUtensils, name: "Catering" },
+  { id: 9, icon: faHouse, name: "Real Estate" },
   {
-    img: "/assets/imgs/1.jpg",
-    name: "10 Rolmeetbanden - 10 meter",
-    amount: "15",
-    date: "21/1/2023",
-  },
-  {
-    img: "/assets/imgs/1.jpg",
-    name: "Youngmans 31089818 multifunctioneel pla...",
-    amount: "15",
-    date: "21/1/2023",
+    id: 10,
+    icon: faEllipsis,
+    name: "All cat.",
   },
 ];
 
-const UpcomingAuctions = () => {
+const AllCategories = () => {
   return (
-    <AdminDashboard label="Upcoming Auctions">
+    <AdminDashboard label="All Categories">
+      {" "}
       <section className="section">
         <div className="row" id="table-head">
           <div className="col-12">
             <div className="card">
               <div className="card-header">
-                <h4 className="card-title">Auctions</h4>
+                <h4 className="card-title">Categories</h4>
               </div>
               <div className="card-content">
                 {/* <!-- table head dark --> */}
@@ -53,30 +67,24 @@ const UpcomingAuctions = () => {
                       <tr>
                         <th>IMG</th>
                         <th>NAME</th>
-                        <th>MINIMUM BID AMOUNT</th>
-                        <th>DATE</th>
                         <th>ACTIONS</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {auctions.map((el, idx) => {
+                      {categories.map((el, idx) => {
                         return (
-                          <tr key={"upcoming-auctions-item" + idx}>
+                          <tr key={"all-auctions-item" + idx}>
                             <td>
-                              <img
+                              <FontAwesomeIcon icon={el.icon} size="xl" />
+                              {/* <img
                                 style={{ width: 50 }}
                                 src={el.img}
                                 alt={el.name}
-                              />
+                              /> */}
                             </td>
                             <td className="text-bold-500">{el.name}</td>
-                            <td>${el.amount}</td>
-                            <td>{el.date}</td>
                             <td>
                               <div className="">
-                                {/* <a href="#0" className="btn icon btn-primary">
-                                  <i className="bi bi-pencil"></i>
-                                </a> */}
                                 <a href="#0" className="btn icon btn-danger">
                                   <i className="bi bi-x"></i>
                                 </a>
@@ -97,4 +105,4 @@ const UpcomingAuctions = () => {
   );
 };
 
-export default UpcomingAuctions;
+export default AllCategories;

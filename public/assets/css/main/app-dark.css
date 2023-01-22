@@ -143,6 +143,11 @@ html[data-bs-theme=dark] body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+html[data-bs-theme=dark] body #root #app {
+  background-color: #151521;
+}
+
 html[data-bs-theme=dark] hr {
   margin: 1rem 0;
   color: inherit;
@@ -2137,8 +2142,8 @@ html[data-bs-theme=dark] .form-check-input:focus {
   box-shadow: 0 0 0 0.25rem rgba(67, 94, 190, 0.25);
 }
 html[data-bs-theme=dark] .form-check-input:checked {
-  background-color: #435ebe;
-  border-color: #435ebe;
+  background-color: #03c988;
+  border-color: #03c988;
 }
 html[data-bs-theme=dark] .form-check-input:checked[type=checkbox] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
@@ -7149,7 +7154,7 @@ html[data-bs-theme=dark] .sidebar-wrapper .menu .sidebar-item.active.has-sub .si
   content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9" style="fill:none;stroke:white;stroke-width:1"></polyline></svg>');
 }
 html[data-bs-theme=dark] .sidebar-wrapper .menu .sidebar-item.active > .sidebar-link {
-  background-color: #435ebe;
+  background-color: #03c988;
 }
 html[data-bs-theme=dark] .sidebar-wrapper .menu .sidebar-item.active > .sidebar-link span {
   color: #fff;
@@ -7175,7 +7180,7 @@ html[data-bs-theme=dark] .sidebar-wrapper .menu .submenu .submenu-item.active {
   position: relative;
 }
 html[data-bs-theme=dark] .sidebar-wrapper .menu .submenu .submenu-item.active > a {
-  color: #435ebe;
+  color: #03c988;
   font-weight: bold;
 }
 html[data-bs-theme=dark] .sidebar-wrapper .menu .submenu .submenu-item a {
@@ -7921,7 +7926,3 @@ html[data-bs-theme=dark] .is-invalid ~ .invalid-tooltip {
   display: block;
 }
 
-
-html[data-bs-theme=dark] body #root #app {
-  background-color: #151521;
-}
